@@ -39,7 +39,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 <a href="#staff" className="block px-4 py-2 hover:bg-gray-100">Staff Augmentation</a>
               </div>
             </div>
-            <a href="#careers" className="hover:text-orange-400 transition-colors">Careers</a>
+            <a href="#careers" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('careers'); }}>Careers</a>
             <a href="#contact" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('contact'); }}>Contact Us</a>
           </nav>
 
@@ -78,7 +78,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                   <a href="#staff" className="hover:text-orange-400 transition-colors">Staff Augmentation</a>
                 </div>
               </div>
-              <a href="#careers" className="hover:text-orange-400 transition-colors">Careers</a>
+              <a href="#careers" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('careers'); setIsMenuOpen(false); }}>Careers</a>
               <a href="#contact" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('contact'); setIsMenuOpen(false); }}>Contact Us</a>
               <div className="flex items-center space-x-2 text-orange-400 pt-2">
                 <Phone className="w-4 h-4" />

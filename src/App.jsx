@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import AboutUsPage from './components/AboutUsPage';
 import ContactUsPage from './components/ContactUsPage';
 import Services from './components/Services';
+import CareersPage from './components/CareersPage';
 // ...existing code...
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         return <ContactUsPage />;
       case 'services':
         return <Services />;
+      case 'careers':
+        return <CareersPage />;
       case 'home':
       default:
         return (
