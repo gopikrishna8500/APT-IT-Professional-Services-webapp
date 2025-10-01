@@ -25,27 +25,31 @@ const ServicesSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-          {services.map((service, index) => (
-            <div key={index} className="text-center group">
-              <div className="mb-6 overflow-hidden rounded-lg">
-                <img 
-                  src={service.image}
-                  alt={service.alt}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
+  <div className="mx-auto w-full lg:w-10/12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 justify-center items-stretch">
+            {services.map((service, index) => (
+              <div key={index} className="group flex flex-col h-full items-center text-center">
+                <div className="mb-6 overflow-hidden rounded-lg w-full">
+                  <img 
+                    src={service.image}
+                    alt={service.alt}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4 w-full">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow w-full">
+                  {service.description}
+                </p>
+                <div className="mt-auto w-full flex justify-center">
+                  <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-md font-semibold transition-colors">
+                    More Info
+                  </button>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-md font-semibold transition-colors">
-                More Info
-              </button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

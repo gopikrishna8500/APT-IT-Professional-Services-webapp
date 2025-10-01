@@ -13,6 +13,8 @@ import AboutUsPage from './components/AboutUsPage';
 import ContactUsPage from './components/ContactUsPage';
 import Services from './components/Services';
 import CareersPage from './components/CareersPage';
+import WebDesignPage from './components/WebDesignPage';
+import StaffAugmentationPage from './components/StaffAugmentationPage';
 // ...existing code...
 
 function App() {
@@ -41,6 +43,10 @@ function App() {
             <ClientLogos />
           </>
         );
+      case 'webdesign':
+        return <WebDesignPage />;
+      case 'staffaugmentation':
+        return <StaffAugmentationPage />;
     }
   };
 

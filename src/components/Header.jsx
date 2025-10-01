@@ -28,15 +28,15 @@ const Header = ({ currentPage, setCurrentPage }) => {
           <nav className="hidden lg:flex items-center space-x-8">
             <a href="#home" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('home'); }}>Home</a>
             <a href="#about" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('about'); }}>About Us</a>
-            <div className="relative group">
-              <a href="#services" className="hover:text-orange-400 transition-colors flex items-center space-x-1" onClick={e => { e.preventDefault(); setCurrentPage('services'); }}>
+            <div className="relative group" tabIndex={0}>
+              <button type="button" className="hover:text-orange-400 transition-colors flex items-center space-x-1 focus:outline-none" tabIndex={-1}>
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
-              </a>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity">
-                <a href="#mobile" className="block px-4 py-2 hover:bg-gray-100">Mobile App Development</a>
-                <a href="#web" className="block px-4 py-2 hover:bg-gray-100">Web Development</a>
-                <a href="#staff" className="block px-4 py-2 hover:bg-gray-100">Staff Augmentation</a>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity">
+                <a href="#mobile" className="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('services'); }}>Mobile App Development</a>
+                <a href="#web" className="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('webdesign'); }}>Web Design</a>
+                <a href="#staff" className="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('staffaugmentation'); }}>Staff Augmentation</a>
               </div>
             </div>
             <a href="#careers" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('careers'); }}>Careers</a>
@@ -74,8 +74,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 <a href="#services" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('services'); setIsMenuOpen(false); }}>Services</a>
                 <div className="pl-4 flex flex-col">
                   <a href="#mobile" className="hover:text-orange-400 transition-colors">Mobile App Development</a>
-                  <a href="#web" className="hover:text-orange-400 transition-colors">Web Development</a>
-                  <a href="#staff" className="hover:text-orange-400 transition-colors">Staff Augmentation</a>
+                  <a href="#web" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('webdesign'); setIsMenuOpen(false); }}>Web Design</a>
+                  <a href="#staff" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('staffaugmentation'); setIsMenuOpen(false); }}>Staff Augmentation</a>
                 </div>
               </div>
               <a href="#careers" className="hover:text-orange-400 transition-colors" onClick={e => { e.preventDefault(); setCurrentPage('careers'); setIsMenuOpen(false); }}>Careers</a>
