@@ -17,7 +17,7 @@ import reactLogo from "../assets/Techeminence/React.png";
 import flutterLogo from "../assets/Techeminence/flutter.png";
 import pythonLogo from "../assets/Techeminence/python-logo-master-v3-TM.png";
 import djangoLogo from "../assets/Techeminence/django.png";
-import objectiveCImg from '../assets/Techeminence/Objective-c.png';
+import ObjectiveCImg from '../assets/Techeminence/Objective-c.png';
 import dotNetLogo from "../assets/Techeminence/NET.png";
 import swiftLogo from "../assets/Techeminence/Swift.png";
 import nodejsLogo from "../assets/Techeminence/nodejsDark.png";
@@ -359,8 +359,8 @@ const [selected, setSelected] = useState(data[0]);
   {/* First Row - scrolling left */}
   <div className="overflow-hidden relative mb-6">
     <div className="marquee">
-      {[goLogo, reactLogo, flutterLogo, pythonLogo, djangoLogo, objectiveCImg, dotNetLogo, swiftLogo, nodejsLogo, kotlinLogo, javaLogo,
-        goLogo, reactLogo, flutterLogo, pythonLogo, djangoLogo, objectiveCImg, dotNetLogo, swiftLogo, nodejsLogo, kotlinLogo, javaLogo
+      {[goLogo, reactLogo, flutterLogo, pythonLogo, djangoLogo, ObjectiveCImg, dotNetLogo, swiftLogo, nodejsLogo, kotlinLogo, javaLogo,
+        goLogo, reactLogo, flutterLogo, pythonLogo, djangoLogo, ObjectiveCImg, dotNetLogo, swiftLogo, nodejsLogo, kotlinLogo, javaLogo
       ].map((logo, index) => (
         <img
           key={index}
