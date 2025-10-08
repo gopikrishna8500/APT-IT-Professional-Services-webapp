@@ -1,23 +1,26 @@
 import React from 'react';
+import mobileAppImg from '../assets/mobileapp.webp';
+import webDevImg from '../assets/webdev.webp';
+import staffAugImg from '../assets/staffaug.webp';
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Mobile App Development",
       description: "We specialize in creating high-quality mobile applications that enhance user experience and drive business growth.",
-      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: mobileAppImg,
       alt: "Mobile app development"
     },
     {
       title: "Web Design & Development",
       description: "We craft visually stunning and highly functional websites that deliver seamless user experiences and empower businesses to thrive online.",
-      image: "https://images.pexels.com/photos/326508/pexels-photo-326508.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: webDevImg,
       alt: "Web development"
     },
     {
       title: "Staff Augmentation",
       description: "Our recruitment arm keeps evolving. At APT IT Professional Services, we don't just fill roles. We align with your vision of business transformation.",
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: staffAugImg,
       alt: "Staff augmentation"
     }
   ];
@@ -25,7 +28,7 @@ const ServicesSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-  <div className="mx-auto w-full lg:w-10/12">
+        <div className="mx-auto w-full lg:w-10/12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 justify-center items-stretch">
             {services.map((service, index) => (
               <div key={index} className="group flex flex-col h-full items-center text-center">

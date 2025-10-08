@@ -310,25 +310,6 @@ const CareersPage = () => {
       >
         <ChevronUp className="w-6 h-6" />
       </button>
-      {/* Footer Section */}
-      <Footer />
-      {/* Copyright Section */}
-      <div className="bg-slate-900 text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-orange-400 transition-colors">About Us</a>
-              <a href="#" className="hover:text-orange-400 transition-colors">Contact Us</a>
-            </div>
-            <div className="text-sm">
-              <span>©Copyright 2025 </span>
-              <span className="text-orange-400">APTITPS</span>
-              <span> All Rights Reserved</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

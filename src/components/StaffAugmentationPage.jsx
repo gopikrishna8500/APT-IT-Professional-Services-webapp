@@ -4,6 +4,8 @@ import productChainImg from '../assets/product-chain.png';
 import softwareEngineerImg from '../assets/softwareengineer.png';
 import teamLeaderImg from '../assets/team-leader.png';
 import { ArrowUp, ChevronDown, ChevronUp, Brain, Clock, TrendingUp, Settings, Users, Code } from 'lucide-react';
+import Lottie from "lottie-react";
+import recruitmentAnimation from "../assets/Recruitment Hiring.json";
 import Footer from './Footer';
 
 const StaffAugmentationPage = () => {
@@ -19,7 +21,8 @@ const StaffAugmentationPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-4">
+      {/* <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-4"> */}
+      <div className="bg-black py-10 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
             Staff Augmentation
@@ -33,27 +36,39 @@ const StaffAugmentationPage = () => {
       </div>
 
   <div className="container mx-auto px-4 py-16 w-full lg:w-10/12">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <section className="py-20 bg-white mb-10">
+      <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[100%]">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6">
+            <h2 className="text-4xl font-bold text-orange-500 mb-6">
               Staff Augmentation
             </h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-6">
-              Our recruitment arm keeps evolving. At APT IT Professional Services, we don't just fill roles. We align with your vision of business transformation.
+            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+              Our recruitment arm keeps evolving. At APT IT Professional
+              Services, we don't just fill roles. We align with your vision of
+              business transformation.
             </p>
-            <p className="text-gray-500 text-base leading-relaxed">
-              It is not about the costs - it is about capability, control and how fast you want to lead in this ever changing tech marketplace.
+            <p className="text-gray-600 text-base leading-relaxed">
+              It is not about the costs — it is about capability, control and
+              how fast you want to lead in this ever changing tech marketplace.
             </p>
           </div>
-          <div className="flex justify-center">
-            <img
-              src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Staff Augmentation"
-              className="w-full max-w-lg rounded-lg shadow-lg"
-            />
+
+          {/* Lottie Animation */}
+          <div className="flex justify-center mt-4 md:mt-0">
+            <div className="w-[450px] h-auto">
+              <Lottie
+                animationData={recruitmentAnimation}
+                loop
+                autoplay
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
           </div>
         </div>
-
+      </div>
+    </section>
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6">
             Our Engagement Models
@@ -74,7 +89,7 @@ const StaffAugmentationPage = () => {
 
             <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
               <div className="flex justify-center mb-6">
-                <img src={softwareEngineerImg} alt="Team Extension" className="w-20 h-20 object-contain" />
+                <img src={teamLeaderImg} alt="Team Extension" className="w-20 h-20 object-contain" />
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Team Extension</h3>
               <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
@@ -84,7 +99,7 @@ const StaffAugmentationPage = () => {
 
             <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
               <div className="flex justify-center mb-6">
-                <img src={teamLeaderImg} alt="Dedicated Development Team" className="w-20 h-20 object-contain" />
+                <img src={softwareEngineerImg} alt="Dedicated Development Team" className="w-20 h-20 object-contain" />
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Dedicated Development Team</h3>
               <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
@@ -128,7 +143,7 @@ const StaffAugmentationPage = () => {
           </div>
         </div>
 
-        <div className="mb-20 max-w-5xl mx-auto">
+        <div className="mb-20 max-w-8xl mx-auto">
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
@@ -311,25 +326,6 @@ const StaffAugmentationPage = () => {
       >
         <ArrowUp className="w-6 h-6" />
       </button>
-
-      {/* Footer sections (same as AboutUsPage and ContactUsPage) */}
-      <Footer />
-      <div className="bg-slate-900 text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-orange-400 transition-colors">About Us</a>
-              <a href="#" className="hover:text-orange-400 transition-colors">Contact Us</a>
-            </div>
-            <div className="text-sm">
-              <span>©Copyright 2025 </span>
-              <span className="text-orange-400">APTITPS</span>
-              <span> All Rights Reserved</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

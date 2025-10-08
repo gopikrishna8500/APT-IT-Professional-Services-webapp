@@ -1,1 +1,51 @@
 @import "tailwindcss";
+/* Smooth and minimal scroll styling for the orange sidebar */
+.left-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.left-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 165, 0, 0.10); /* light orange background */
+  border-radius: 9999px;
+}
+
+.left-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28); /* translucent white thumb */
+  border-radius: 9999px;
+}
+
+/* Firefox support */
+.left-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.28) rgba(255, 165, 0, 0.10);
+}
+/* Marquee animation for left-to-right scroll */
+.marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-reverse {
+  display: flex;
+  animation: marquee-reverse 20s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

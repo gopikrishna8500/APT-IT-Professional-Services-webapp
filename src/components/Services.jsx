@@ -2,13 +2,16 @@ import React from 'react';
 import aboutImg1 from '../assets/about-img1.png';
 import googleMap from '../assets/google-map.png';
 import { ChevronRight, Smartphone, Monitor, Search } from 'lucide-react';
+import appDevelopmentImg from '../assets/Techeminence/app-development.png';
+import webDevelopmentImg from '../assets/Techeminence/development.svg';
+import staffManagementImg from '../assets/Techeminence/staff-management.svg';
 import Footer from './Footer';
 
 const Services = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb Section */}
-      <div className="bg-white py-16">
+      <div className="bg-black py-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-orange-500 mb-4">Services</h1>
           <div className="flex items-center justify-center text-gray-500">
@@ -47,17 +50,18 @@ const Services = () => {
                 className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
               />
             </div>
-
-          {/* Services Section */}
+{/* Services Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Mobile App Development */}
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-white">
-                  <Smartphone className="w-8 h-8 text-orange-500 group-hover:text-orange-500" />
+                  <img src={appDevelopmentImg} alt="Mobile App Development" className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">Mobile App Development</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">
+                Mobile App Development
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white">
                 We engineer high-performance, custom mobile apps that drive massive user acquisition and ensure long-term market leadership.
               </p>
@@ -70,10 +74,12 @@ const Services = () => {
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-white">
-                  <Monitor className="w-8 h-8 text-orange-500 group-hover:text-orange-500" />
+                  <img src={webDevelopmentImg} alt="Web Development" className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">Web Development</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">
+                Web Development
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white">
                 We build intuitive, scalable web platforms designed to convert visitors into loyal customers and accelerate your business growth.
               </p>
@@ -86,10 +92,12 @@ const Services = () => {
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-white">
-                  <Search className="w-8 h-8 text-orange-500 group-hover:text-orange-500" />
+                  <img src={staffManagementImg} alt="Staff Augmentation" className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">Staff Augmentation</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">
+                Staff Augmentation
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white">
                 We provide elite, vetted developers on-demand, enabling you to rapidly scale teams, modernize systems, and accelerate transformation.
               </p>
@@ -100,25 +108,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-
-    
-          <Footer />
-          <div className="bg-slate-900 text-white py-6">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div className="flex space-x-6 text-sm">
-                  <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-                  <a href="#" className="hover:text-orange-400 transition-colors">About Us</a>
-                  <a href="#" className="hover:text-orange-400 transition-colors">Contact Us</a>
-                </div>
-                <div className="text-sm">
-                  <span>©Copyright 2025 </span>
-                  <span className="text-orange-400">APTITPS</span>
-                  <span> All Rights Reserved</span>
-                </div>
-              </div>
-            </div>
-          </div>
     </div>
   );
 };
