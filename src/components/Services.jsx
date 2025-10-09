@@ -27,7 +27,7 @@ const Services = () => {
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center relative">
           {/* World Map Background */}
-          <div className="absolute inset-0 flex justify-center items-center pointer-events-none select-none">
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 pointer-events-none select-none">
             <img
               src={googleMap}
               alt="World map background"
