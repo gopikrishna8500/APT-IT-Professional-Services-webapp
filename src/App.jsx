@@ -35,7 +35,7 @@ const PrivacyPolicyPage = () => {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="pt-20 lg:pt-20">
         {/* Header */}
         <Header />
         <ScrollToTop />

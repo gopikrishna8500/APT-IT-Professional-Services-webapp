@@ -218,9 +218,6 @@ const Header = () => {
           </AnimatePresence>
         </div>
       </header>
-
-      {/* Spacer to prevent overlap */}
-      <div className="h-20 lg:h-20" />
     </>
   );
 };
