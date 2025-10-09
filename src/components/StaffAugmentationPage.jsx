@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import modelImg from '../assets/model.png';
 import productChainImg from '../assets/product-chain.png';
 import softwareEngineerImg from '../assets/softwareengineer.png';
@@ -35,40 +36,40 @@ const StaffAugmentationPage = () => {
         </div>
       </div>
 
-  <div className="container mx-auto px-4 py-16 w-full lg:w-10/12">
+      <div className="container mx-auto px-4 py-16 w-full lg:w-10/12">
         <section className="py-20 bg-white mb-10">
-      <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[100%]">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div>
-            <h2 className="text-4xl font-bold text-orange-500 mb-6">
-              Staff Augmentation
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Our recruitment arm keeps evolving. At APT IT Professional
-              Services, we don't just fill roles. We align with your vision of
-              business transformation.
-            </p>
-            <p className="text-gray-600 text-base leading-relaxed">
-              It is not about the costs — it is about capability, control and
-              how fast you want to lead in this ever changing tech marketplace.
-            </p>
-          </div>
+          <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[100%]">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
+              <div>
+                <h2 className="text-4xl font-bold text-orange-500 mb-6">
+                  Staff Augmentation
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  Our recruitment arm keeps evolving. At APT IT Professional
+                  Services, we don't just fill roles. We align with your vision of
+                  business transformation.
+                </p>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  It is not about the costs — it is about capability, control and
+                  how fast you want to lead in this ever changing tech marketplace.
+                </p>
+              </div>
 
-          {/* Lottie Animation */}
-          <div className="flex justify-center mt-4 md:mt-0">
-            <div className="w-[450px] h-auto">
-              <Lottie
-                animationData={recruitmentAnimation}
-                loop
-                autoplay
-                style={{ width: "100%", height: "auto" }}
-              />
+              {/* Lottie Animation */}
+              <div className="flex justify-center mt-4 md:mt-0">
+                <div className="w-[450px] h-auto">
+                  <Lottie
+                    animationData={recruitmentAnimation}
+                    loop
+                    autoplay
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6">
             Our Engagement Models
@@ -148,9 +149,8 @@ const StaffAugmentationPage = () => {
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => toggleAccordion('why-choose')}
-                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-                  openAccordion === 'why-choose' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
-                }`}
+                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${openAccordion === 'why-choose' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
+                  }`}
               >
                 <span className="text-lg font-semibold">Why choose this model?</span>
                 {openAccordion === 'why-choose' ? (
@@ -172,9 +172,8 @@ const StaffAugmentationPage = () => {
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => toggleAccordion('per-hour')}
-                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-                  openAccordion === 'per-hour' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
-                }`}
+                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${openAccordion === 'per-hour' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
+                  }`}
               >
                 <span className="text-lg font-semibold">Per Hour Basis Expert Support When You Need It</span>
                 {openAccordion === 'per-hour' ? (
@@ -186,7 +185,7 @@ const StaffAugmentationPage = () => {
               {openAccordion === 'per-hour' && (
                 <div className="bg-gray-50 px-6 py-4">
                   <p className="text-gray-600">
-                    Need a specialist for a quick code review? This hourly engaging model gives you instant access to expert engineers, solution architects, designers, or strategists without long-term commitments.<br/>
+                    Need a specialist for a quick code review? This hourly engaging model gives you instant access to expert engineers, solution architects, designers, or strategists without long-term commitments.<br />
                     This model is perfect for stints or niche technical tasks where every minute counts.
                   </p>
                 </div>
@@ -196,9 +195,8 @@ const StaffAugmentationPage = () => {
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => toggleAccordion('fixed-price')}
-                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-                  openAccordion === 'fixed-price' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
-                }`}
+                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${openAccordion === 'fixed-price' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
+                  }`}
               >
                 <span className="text-lg font-semibold">Fixed Price Predictability You Can Count On</span>
                 {openAccordion === 'fixed-price' ? (
@@ -210,8 +208,8 @@ const StaffAugmentationPage = () => {
               {openAccordion === 'fixed-price' && (
                 <div className="bg-gray-50 px-6 py-4 space-y-4">
                   <p className="text-gray-600">
-                    This is your best bet when your project scope is well-defined and you seek cost-certainty.<br/>
-                    Our team of vetted software veterans handle end-to-end execution with clear timeframes, milestones and deliverables.<br/>
+                    This is your best bet when your project scope is well-defined and you seek cost-certainty.<br />
+                    Our team of vetted software veterans handle end-to-end execution with clear timeframes, milestones and deliverables.<br />
                     No hidden surprises - only complete accountability, smooth delivery from concept to deployment.
                   </p>
                 </div>
@@ -221,9 +219,8 @@ const StaffAugmentationPage = () => {
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => toggleAccordion('contract-staffing')}
-                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-                  openAccordion === 'contract-staffing' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
-                }`}
+                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${openAccordion === 'contract-staffing' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
+                  }`}
               >
                 <span className="text-lg font-semibold">Contract Staffing</span>
                 {openAccordion === 'contract-staffing' ? (
@@ -262,9 +259,8 @@ const StaffAugmentationPage = () => {
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => toggleAccordion('permanent-hiring')}
-                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-                  openAccordion === 'permanent-hiring' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
-                }`}
+                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${openAccordion === 'permanent-hiring' ? 'bg-orange-500 text-white' : 'bg-white text-slate-900'
+                  }`}
               >
                 <span className="text-lg font-semibold">Permanent Hiring</span>
                 {openAccordion === 'permanent-hiring' ? (
@@ -294,7 +290,7 @@ const StaffAugmentationPage = () => {
                     <li>Consistency in quality hires</li>
                   </ul>
                   <p className="text-gray-600">
-                    Need some assistance in selecting what works best for you?<br/>
+                    Need some assistance in selecting what works best for you?<br />
                     At APT IT Professional Services, we know the importance of customization. Our tech team of managers and strategists are here to help you with a concrete roadmap and help you <b><i>Build Your Own Team</i></b>. Talk to functional consultants and we will guide you to the smartest fit!
                   </p>
                 </div>
@@ -314,7 +310,9 @@ const StaffAugmentationPage = () => {
             Talk to functional consultants and we will guide you to the smartest fit!
           </p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
-            Contact Us
+            <Link to="/contact-us">
+              Contact Us
+            </Link>
           </button>
         </div>
       </div>

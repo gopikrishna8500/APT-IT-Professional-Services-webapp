@@ -277,9 +277,8 @@ const CareersPage = () => {
                           <span>{job.technology}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            job.type === 'Remote' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-                          }`}>
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${job.type === 'Remote' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                            }`}>
                             {job.type}
                           </span>
                         </div>

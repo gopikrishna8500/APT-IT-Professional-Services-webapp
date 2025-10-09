@@ -82,19 +82,19 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center text-gray-600">
                   <img src={facebookIcon} alt="Facebook" className="h-6 w-6 mr-3" />
-                  <a href="#" className="hover:text-orange-500 transition-colors">Facebook</a>
+                  <a href="https://www.facebook.com/people/APTIT-Professional-Service/100066877321032/#" className="hover:text-orange-500 transition-colors">Facebook</a>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <img src={xIcon} alt="X" className="h-6 w-6 mr-3" />
-                  <a href="#" className="hover:text-orange-500 transition-colors">X</a>
+                  <a href="https://x.com/APTITServices" className="hover:text-orange-500 transition-colors">X</a>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <img src={instagramIcon} alt="Instagram" className="h-6 w-6 mr-3" />
-                  <a href="#" className="hover:text-orange-500 transition-colors">Instagram</a>
+                  <a href="https://www.instagram.com/aptitps/" className="hover:text-orange-500 transition-colors">Instagram</a>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6 mr-3" />
-                  <a href="#" className="hover:text-orange-500 transition-colors">LinkedIn</a>
+                  <a href="https://www.linkedin.com/company/aptit-professional-services-usa/" className="hover:text-orange-500 transition-colors">LinkedIn</a>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-500">
-              ©Copyright 2025 <span className="text-orange-500 font-medium">APTTIPS</span> All Rights Reserved
+              ©Copyright 2025 <span className="text-orange-500 font-medium">APTITPS</span> All Rights Reserved
             </p>
           </div>
         </div>

@@ -1,7 +1,8 @@
-import React from "react"; 
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./ScrollToTop";
 
 // Pages & Sections
 import HeroSection from "./components/HeroSection";
@@ -11,7 +12,6 @@ import JobSection from "./components/JobSection";
 import TestimonialSection from "./components/TestimonialSection";
 import ContactSection from "./components/ContactSection";
 import ClientLogos from "./components/ClientLogos";
-
 import AboutUsPage from "./components/AboutUsPage";
 import ContactUsPage from "./components/ContactUsPage";
 import Services from "./components/Services";
@@ -38,6 +38,7 @@ function App() {
       <div className="min-h-screen">
         {/* Header */}
         <Header />
+        <ScrollToTop />
 
         {/* Routes */}
         <Routes>

@@ -112,14 +112,16 @@ const Header = () => {
             </nav>
 
             {/* Contact Info */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-orange-400">
                 <Phone className="w-4 h-4" />
                 <span className="text-sm font-bold">+1 (718) 360-4995</span>
               </div>
-              <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
+              <button className="ml-6 bg-gray-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
                 <Mail className="w-4 h-4" />
-                <span>Mail Us</span>
+                <span>
+                  <a href="mailto:info@aptitps.com">Mail Us</a>
+                </span>
               </button>
             </div>
 

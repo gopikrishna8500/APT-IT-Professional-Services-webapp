@@ -70,42 +70,42 @@ const ContactUsPage = () => {
       </div>
 
       {/* Our Branches Section */}
-<div className="py-16 bg-gray-50">
-  <div className="container mx-auto px-4 max-w-5xl">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-bold text-orange-500 mb-4">Our Branches</h2>
-    </div>
-
-    <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-      {[
-        {
-          title: "United States",
-          address: ["800 Third Avenue,", "FRNT A #1472 New York, NY 10022", "United States"]
-        },
-        {
-          title: "United States",
-          address: ["30 N Gould St Sheridan,", "WY 82801", "United States"]
-        },
-        {
-          title: "India",
-          address: ["Orbit Building,", "Knowledge City", "Raidurg, Hyderabad,", "Telangana 500019,India"]
-        }
-      ].map((branch, idx) => (
-        <div key={idx} className="text-center transition-colors duration-200 hover:bg-orange-500 hover:text-white rounded-lg cursor-pointer flex flex-col justify-center items-center w-64 h-64">
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-              <MapPin className="w-8 h-8 text-orange-500" />
-            </div>
+      <div className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-orange-500 mb-4">Our Branches</h2>
           </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">{branch.title}</h3>
-          <div className="text-gray-600 space-y-1">
-            {branch.address.map((line, i) => <p key={i}>{line}</p>)}
+
+          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+            {[
+              {
+                title: "United States",
+                address: ["800 Third Avenue,", "FRNT A #1472 New York, NY 10022", "United States"]
+              },
+              {
+                title: "United States",
+                address: ["30 N Gould St Sheridan,", "WY 82801", "United States"]
+              },
+              {
+                title: "India",
+                address: ["Orbit Building,", "Knowledge City", "Raidurg, Hyderabad,", "Telangana 500019,India"]
+              }
+            ].map((branch, idx) => (
+              <div key={idx} className="text-center transition-colors duration-200 hover:bg-orange-500 hover:text-white rounded-lg cursor-pointer flex flex-col justify-center items-center w-64 h-64">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
+                    <MapPin className="w-8 h-8 text-orange-500" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{branch.title}</h3>
+                <div className="text-gray-600 space-y-1">
+                  {branch.address.map((line, i) => <p key={i}>{line}</p>)}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
 
       {/* Contact Form Section */}

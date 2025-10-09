@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import mobileAppImg from '../assets/mobileapp.webp';
 import webDevImg from '../assets/webdev.webp';
 import staffAugImg from '../assets/staffaug.webp';
@@ -9,19 +10,22 @@ const ServicesSection = () => {
       title: "Mobile App Development",
       description: "We specialize in creating high-quality mobile applications that enhance user experience and drive business growth.",
       image: mobileAppImg,
-      alt: "Mobile app development"
+      alt: "Mobile app development",
+      link: "/mobile",
     },
     {
       title: "Web Design & Development",
       description: "We craft visually stunning and highly functional websites that deliver seamless user experiences and empower businesses to thrive online.",
       image: webDevImg,
-      alt: "Web development"
+      alt: "Web development",
+      link: "/webdesign"
     },
     {
       title: "Staff Augmentation",
       description: "Our recruitment arm keeps evolving. At APT IT Professional Services, we don't just fill roles. We align with your vision of business transformation.",
       image: staffAugImg,
-      alt: "Staff augmentation"
+      alt: "Staff augmentation",
+      link: "/staff-augmentation",
     }
   ];
 
@@ -33,7 +37,7 @@ const ServicesSection = () => {
             {services.map((service, index) => (
               <div key={index} className="group flex flex-col h-full items-center text-center">
                 <div className="mb-6 overflow-hidden rounded-lg w-full">
-                  <img 
+                  <img
                     src={service.image}
                     alt={service.alt}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
@@ -47,7 +51,10 @@ const ServicesSection = () => {
                 </p>
                 <div className="mt-auto w-full flex justify-center">
                   <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-md font-semibold transition-colors">
-                    More Info
+                    <Link to={service.link}>
+                      More Info
+                    </Link>
+
                   </button>
                 </div>
               </div>

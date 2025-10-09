@@ -68,50 +68,55 @@ const ContactSection = () => {
             </div>
           </div>
 
-        {/* ================= Stats/Action Box Section ================= */}
-<section ref={ref} className="w-full bg-gray-100 py-12">
-  <div className="flex flex-col lg:flex-row items-center justify-between w-full px-4 lg:px-16">
-    {/* Left: Logo + Text */}
-    <div className="flex items-center mb-8 lg:mb-0 lg:w-7/12">
-      <div className="flex-shrink-0">
-        <img
-          src={aptitpsLogo}
-          alt="APTITPS Logo"
-          className="h-16 w-auto object-contain"
-        />
-      </div>
-      <p className="text-gray-700 ml-4 mt-4 lg:mt-0">
-        Create a free account to find thousands of Jobs, Employment & Career Opportunities around you!
-      </p>
-    </div>
+          {/* ================= Stats/Action Box Section ================= */}
+          <section ref={ref} className="w-full bg-gray-100 py-12">
+            <div className="w-full max-w-screen-xl mx-auto px-4 lg:px-16">
+              <div className="flex flex-col lg:flex-row items-center justify-between w-full">
 
-    {/* Right: Counters */}
-    <div className="flex space-x-8 lg:space-x-12 lg:w-5/12">
-      {/* Jobs Posted */}
-      <div className="text-center">
-        <div className="flex items-center justify-center mb-2">
-          <Briefcase className="h-8 w-8 text-orange-500 mr-2" />
-          <span className="text-3xl font-bold text-gray-800">
-            {inView ? <CountUp start={0} end={1562} duration={3} separator="," /> : 0}
-          </span>
-        </div>
-        <p className="text-gray-600">Jobs Posted</p>
-      </div>
+                {/* Left: Logo + Text */}
+                <div className="flex flex-col lg:flex-row items-center lg:items-start mb-8 lg:mb-0 text-center lg:text-left lg:w-7/12">
+                  <div className="flex-shrink-0 mb-4 lg:mb-0">
+                    <img
+                      src={aptitpsLogo}
+                      alt="APTITPS Logo"
+                      className="h-16 w-auto object-contain mx-auto lg:mx-0"
+                    />
+                  </div>
+                  <p className="text-gray-700 lg:ml-4">
+                    Create a free account to find thousands of Jobs, Employment & Career Opportunities around you!
+                  </p>
+                </div>
 
-      {/* Companies */}
-      <div className="text-center">
-        <div className="flex items-center justify-center mb-2">
-          <Users className="h-8 w-8 text-orange-500 mr-2" />
-          <span className="text-3xl font-bold text-gray-800">
-            {inView ? <CountUp start={0} end={240} duration={3} separator="," /> : 0}
-          </span>
-        </div>
-        <p className="text-gray-600 px-20">Companies</p>
-      </div>
-    </div>
-  </div>
-      </section>
+                {/* Right: Counters */}
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-end items-center lg:items-start space-y-4 sm:space-y-0 sm:space-x-12 lg:space-x-16 lg:w-5/12 text-center lg:text-left">
+                  {/* Jobs Posted */}
+                  <div className="flex flex-col items-center sm:items-start">
+                    <div className="flex items-center justify-center sm:justify-start mb-2">
+                      <Briefcase className="h-8 w-8 text-orange-500 mr-2" />
+                      <span className="text-3xl font-bold text-gray-800">
+                        {inView ? <CountUp start={0} end={1562} duration={3} separator="," /> : 0}
+                      </span>
+                    </div>
+                    <p className="text-gray-600">Jobs Posted</p>
+                  </div>
+
+                  {/* Companies */}
+                  <div className="flex flex-col items-center sm:items-start">
+                    <div className="flex items-center justify-center sm:justify-start mb-2">
+                      <Users className="h-8 w-8 text-orange-500 mr-2" />
+                      <span className="text-3xl font-bold text-gray-800">
+                        {inView ? <CountUp start={0} end={240} duration={3} separator="," /> : 0}
+                      </span>
+                    </div>
+                    <p className="text-gray-600">Companies</p>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </section>
+
+        </div>
       </section>
 
     </div>

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
   Search,
   Settings,
@@ -32,9 +32,31 @@ import javaLogo from "../assets/Techeminence/Java.png";
 import Footer from "./Footer";
 
 const WebDesignPage = () => {
+  const [animationData, setAnimationData] = useState(null);
+
+  useEffect(() => {
+    // ensure top-of-page on mount
+    window.scrollTo(0, 0);
+
+    let mounted = true;
+    import("../assets/webdev.json")
+      .then((mod) => {
+        if (mounted) setAnimationData(mod.default);
+      })
+      .catch(() => {
+        // ignore load errors for now
+      });
+
+    return () => {
+      mounted = false;
+      setAnimationData(null);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
 
   // ✅ Use useMemo to prevent re-creation on each render
   const coreWebData = useMemo(
@@ -168,11 +190,10 @@ const WebDesignPage = () => {
                 {coreWebData.map((item) => (
                   <div
                     key={item.id}
-                    className={`cursor-pointer px-6 py-5 text-center text-lg font-medium transition-all border-b border-orange-400/50 ${
-                      selectedCore.id === item.id
+                    className={`cursor-pointer px-6 py-5 text-center text-lg font-medium transition-all border-b border-orange-400/50 ${selectedCore.id === item.id
                         ? "bg-orange-600 font-bold"
                         : "hover:bg-orange-600"
-                    }`}
+                      }`}
                     onClick={() => setSelectedCore(item)}
                   >
                     {item.title}
@@ -200,7 +221,7 @@ const WebDesignPage = () => {
             Full Lifecycle Web Development
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[ 
+            {[
               { img: businessAnalysisImg, title: "Business Analysis", desc: "We begin with deep-dive discovery sessions, stakeholder interviews, and market research to define goals, identify challenges, and align the product vision with your business needs." },
               { img: strategicImg, title: "Strategic Planning", desc: "Our planning process includes scope definition, timeline estimation, resource allocation, and roadmap creation—setting the foundation for an efficient, result-oriented engagement." },
               { img: agileImg, title: "Agile Development", desc: "We use Agile methodologies to enable iterative delivery, continuous feedback, and flexible execution. This ensures reduced risk, improved product quality, and faster time to market." },
@@ -311,7 +332,7 @@ const WebDesignPage = () => {
         <ArrowUp className="w-6 h-6" />
       </button>
 
-     
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  
+
   const testimonials = [
     {
       text: "APTIT Professional Services provided qualified candidates to support our business and are always willing to go the extra mile in making sure that our staffing needs are met. I highly recommend APTIT Professional Services to other engineering firms looking to increase their talent and ability to successfully complete projects on time.",
@@ -42,22 +42,22 @@ const TestimonialSection = () => {
 
           <div className="relative">
             <div className="flex items-center justify-center mb-8">
-              <button 
+              <button
                 onClick={prevTestimonial}
                 className="p-2 rounded-full hover:bg-gray-200 transition-colors mr-8"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-400" />
               </button>
-              
+
               <div className="w-20 h-20 rounded-full overflow-hidden mx-8">
-                <img 
+                <img
                   src={testimonials[currentTestimonial].image}
                   alt={testimonials[currentTestimonial].author}
                   className="w-full h-full object-cover"
                 />
               </div>
-              
-              <button 
+
+              <button
                 onClick={nextTestimonial}
                 className="p-2 rounded-full hover:bg-gray-200 transition-colors ml-8"
               >
@@ -71,7 +71,7 @@ const TestimonialSection = () => {
 
             {/* Large Quote Mark */}
             <div className="text-gray-300 text-8xl font-serif mb-4">"</div>
-            
+
             <cite className="text-slate-900 font-semibold text-xl">
               {testimonials[currentTestimonial].author}
             </cite>
