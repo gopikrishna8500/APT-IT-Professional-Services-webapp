@@ -138,7 +138,7 @@ const AboutUsPage = () => {
             {/* Left Image */}
             <div>
               <img
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"
+                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop"
                 alt="Person working on laptop"
                 className="w-full rounded-lg shadow-lg"
               />

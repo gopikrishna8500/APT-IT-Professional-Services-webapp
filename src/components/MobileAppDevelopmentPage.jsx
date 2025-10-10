@@ -76,10 +76,10 @@ const MobileAppDevelopmentPage = () => {
 
             {/* Left Content */}
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6 text-orange-500 ">
+              <h2 className="text-4xl font-bold text-primary mb-2 text-orange-500 ">
                 Android App Development
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              <p className="text-gray-600 font-bold text-lg leading-relaxed mb-4">
                 We specialize in creating high-quality mobile applications that enhance user experience and drive business growth.
               </p>
             </div>
