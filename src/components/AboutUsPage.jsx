@@ -12,16 +12,34 @@ import Footer from './Footer';
 const AboutUsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-black py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">About Us</h1>
-          <div className="flex items-center justify-center text-gray-500">
-            <span>Home</span>
-            <ChevronRight className="h-4 w-4 mx-2" />
-            <span className="text-orange-500">About us</span>
-          </div>
-        </div>
-      </div>
+     <div
+  className="relative py-16 bg-cover bg-center overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=1600&q=80')",
+  }}
+>
+  {/* Dark gradient overlay for professional look */}
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-gray-900/80 to-slate-900/90"></div>
+
+  {/* Optional subtle pattern overlay */}
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+
+  {/* Content */}
+  <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+    <h1 className="text-4xl font-bold text-orange-500 mb-4 drop-shadow-lg">
+      About Us
+    </h1>
+    <div className="flex items-center justify-center text-white">
+      <span className="hover:text-orange-400 transition-colors cursor-pointer">
+        Home
+      </span>
+      <ChevronRight className="h-4 w-4 mx-2 text-orange-400" />
+      <span className="text-orange-500 font-semibold">About Us</span>
+    </div>
+  </div>
+</div>
+
 
       {/* Hero Section with Team Image */}
       <div className="bg-white py-16">

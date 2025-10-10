@@ -23,18 +23,27 @@ const StaffAugmentationPage = () => {
   return (
     <div className="bg-white">
       {/* <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-4"> */}
-      <div className="bg-black py-10 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
-            Staff Augmentation
-          </h1>
-          <div className="flex items-center justify-center space-x-2 text-gray-600">
-            <a href="#" className="hover:text-orange-500">Home</a>
-            <span>&gt;</span>
-            <span className="text-orange-500">Staff Augmentation</span>
+      <div
+        className="relative py-12 bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800')",
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">Staff Augumentation</h1>
+          <div className="flex items-center justify-center space-x-2 text-white">
+            <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
+            <span className="text-orange-400">›</span>
+            <span className="text-orange-500">Staff Augumentation</span>
           </div>
         </div>
       </div>
+
 
       <div className="container mx-auto px-4 py-16 w-full lg:w-10/12">
         <section className="py-20 bg-white mb-10">

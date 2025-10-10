@@ -136,21 +136,26 @@ const WebDesignPage = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col justify-between">
       {/* Banner Section */}
-      <div className="bg-black py-10 mb-10">
-        <div className="container text-center lg:w-8/12 mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
-            Web Design & Development
-          </h1>
-          <div className="flex items-center justify-center space-x-2 text-gray-400">
-            <a href="/" className="hover:text-orange-500">
-              Home
-            </a>
-            <span>&gt;</span>
-            <span className="text-orange-500">Web Design & Development</span>
+       <div
+        className="relative py-12 bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage:
+             "url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200')",
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">Mobile App Development</h1>
+          <div className="flex items-center justify-center space-x-2 text-white">
+            <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
+            <span className="text-orange-400">›</span>
+            <span className="text-orange-500">Mobile App Development</span>
           </div>
         </div>
       </div>
-
       {/* Intro Section */}
       <div className="container px-4 py-16 lg:w-10/12 mx-auto">
         <section className="py-20 bg-white mb-10">

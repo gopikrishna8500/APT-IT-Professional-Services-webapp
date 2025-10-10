@@ -39,7 +39,6 @@ function App() {
         {/* Header */}
         <Header />
         <ScrollToTop />
-
         {/* Routes */}
         <Routes>
           <Route

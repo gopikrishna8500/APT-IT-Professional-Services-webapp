@@ -24,7 +24,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      // className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden -mt-16 lg:-mt-20"
     >
       {/* Video Background with parallax */}
       <video
@@ -114,3 +115,10 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+
+
+
+

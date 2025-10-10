@@ -12,21 +12,22 @@ const Header = () => {
   return (
     <>
       {/* Fixed Header */}
-      <header className="bg-slate-900 text-white fixed w-full top-0 left-0 z-50 shadow-md">
-        <div className="container mx-auto px-4">
+      {/* <header className="bg-slate-900 text-white fixed w-full top-0 left-0 z-50 shadow-md h-16 lg:h-20"> */}
+      <header className="fixed w-full top-0 left-0 z-50 bg-slate-900  text-white shadow-md h-16 lg:h-20 transition-all duration-300">
+      <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-0.5">
               <img
                 src={aptitpsLogo}
                 alt="APTITPS Logo"
-                className="h-12 w-auto object-contain"
+                className="h-12 w-10000 object-contain"
                 style={{ maxWidth: "160px" }}
               />
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 <div className="font-bold text-white">APT IT</div>
                 <div className="text-xs text-gray-300">Professional Services</div>
-              </div>
+              </div> */}
             </div>
 
             {/* Desktop Navigation */}
@@ -117,7 +118,7 @@ const Header = () => {
                 <Phone className="w-4 h-4" />
                 <span className="text-sm font-bold">+1 (718) 360-4995</span>
               </div>
-              <button className="ml-6 bg-gray-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
+              <button className="ml-6 bg-red-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
                 <Mail className="w-4 h-4" />
                 <span>
                   <a href="mailto:info@aptitps.com">Mail Us</a>

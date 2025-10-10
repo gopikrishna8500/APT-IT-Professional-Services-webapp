@@ -46,18 +46,28 @@ const MobileAppDevelopmentPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       {/* <section className="bg-gradient-to-b from-gray-50 to-black py-12"> */}
-      <section className="bg-black py-10">
-        <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
-          <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold text-orange-500 mb-4">Mobile App Development</h1>
-            <div className="flex items-center justify-center text-gray-600 space-x-2">
-              <a href="#" className="hover:text-orange-500">Home</a>
-              <span>&gt;</span>
-              <span className="text-orange-500">Mobile App Development</span>
-            </div>
+      <div
+        className="relative py-12 bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">Mobile App Development</h1>
+          <div className="flex items-center justify-center space-x-2 text-white">
+            <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
+            <span className="text-orange-400">›</span>
+            <span className="text-orange-500">Mobile App Development</span>
           </div>
         </div>
-      </section>
+      </div>
+
+
 
       {/* Android App Development Section */}
       <section className="py-20 mb-5 bg-white">

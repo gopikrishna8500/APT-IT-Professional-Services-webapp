@@ -25,18 +25,27 @@ const ContactUsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page Header */}
-      <div className="bg-black py-12">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-orange-500 mb-4">Contact Us</h1>
-            <div className="flex items-center justify-center space-x-2 text-gray-600">
-              <span>Home</span>
-              <span>›</span>
-              <span className="text-orange-500">Contact us</span>
-            </div>
+      <div
+        className="relative py-12 bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">Contact Us</h1>
+          <div className="flex items-center justify-center space-x-2 text-white">
+            <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
+            <span className="text-orange-400">›</span>
+            <span className="text-orange-500">Contact us</span>
           </div>
         </div>
       </div>
+
 
       {/* Contact Info Cards */}
       <div className="py-16 bg-white">
