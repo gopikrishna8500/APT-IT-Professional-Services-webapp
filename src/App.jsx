@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./ScrollToTop";
-
 // Pages & Sections
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
@@ -35,7 +34,7 @@ const PrivacyPolicyPage = () => {
 function App() {
   return (
     <Router>
-      <div className="pt-20 lg:pt-20">
+      <div className="">
         {/* Header */}
         <Header />
         <ScrollToTop />

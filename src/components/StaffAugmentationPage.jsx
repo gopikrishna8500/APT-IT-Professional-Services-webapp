@@ -24,7 +24,7 @@ const StaffAugmentationPage = () => {
     <div className="bg-white">
       {/* <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-4"> */}
       <div
-        className="relative py-12 bg-cover bg-center overflow-hidden"
+        className="relative py-20 bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
             "url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800')",

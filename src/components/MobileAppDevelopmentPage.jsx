@@ -47,7 +47,7 @@ const MobileAppDevelopmentPage = () => {
       {/* Hero Section */}
       {/* <section className="bg-gradient-to-b from-gray-50 to-black py-12"> */}
       <div
-        className="relative py-12 bg-cover bg-center overflow-hidden"
+        className="relative py-20 bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')",

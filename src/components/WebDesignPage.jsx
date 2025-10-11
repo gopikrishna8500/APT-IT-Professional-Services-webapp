@@ -137,7 +137,7 @@ const WebDesignPage = () => {
     <div className="bg-white min-h-screen flex flex-col justify-between">
       {/* Banner Section */}
        <div
-        className="relative py-12 bg-cover bg-center overflow-hidden"
+        className="relative py-20 bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
              "url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200')",
@@ -148,11 +148,11 @@ const WebDesignPage = () => {
 
         {/* Content */}
         <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">Mobile App Development</h1>
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">Web Design & Development</h1>
           <div className="flex items-center justify-center space-x-2 text-white">
             <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
             <span className="text-orange-400">›</span>
-            <span className="text-orange-500">Mobile App Development</span>
+            <span className="text-orange-500">Web Design & Development</span>
           </div>
         </div>
       </div>

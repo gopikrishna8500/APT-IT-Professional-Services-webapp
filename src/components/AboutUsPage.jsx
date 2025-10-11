@@ -13,7 +13,7 @@ const AboutUsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
      <div
-  className="relative py-16 bg-cover bg-center overflow-hidden"
+  className="relative py-20 bg-cover bg-center overflow-hidden"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=1600&q=80')",
