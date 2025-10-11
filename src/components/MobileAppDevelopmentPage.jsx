@@ -23,9 +23,6 @@ import swiftLogo from "../assets/Techeminence/Swift.png";
 import nodejsLogo from "../assets/Techeminence/nodejsDark.png";
 import kotlinLogo from "../assets/Techeminence/kotlin-logo.png";
 import javaLogo from "../assets/Techeminence/Java.png";
-
-import Footer from './Footer';
-
 const MobileAppDevelopmentPage = () => {
   const data = [
     { id: 1, title: "Mobile Application Development", content: "APTIT PS is a leading software company with a decade of experience in mobile app development services.", icon: <span className="text-orange-500 text-4xl">📱</span> },
@@ -37,11 +34,7 @@ const MobileAppDevelopmentPage = () => {
     { id: 7, title: "Discovery phase", content: "Implement your business idea consulting our experts and you get the best solutions ever to satisfy your target users’ needs.", icon: <span className="text-orange-500 text-4xl">🔍</span> },
     { id: 8, title: "IT System & Software Integration Services", content: "APT IT Professional Services is a software integration company that can help you integrate enterprise applications, data, and processes in the most efficient way.", icon: <span className="text-orange-500 text-4xl">🔗</span> },
   ];
-
   const [selected, setSelected] = useState(data[0]);
-
-
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -58,21 +51,21 @@ const MobileAppDevelopmentPage = () => {
 
         {/* Content */}
         <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">Mobile App Development</h1>
-          <div className="flex items-center justify-center space-x-2 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 mb-4">
+            Mobile App Development
+          </h1>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-2 text-white text-sm sm:text-base">
             <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
             <span className="text-orange-400">›</span>
             <span className="text-orange-500">Mobile App Development</span>
           </div>
         </div>
       </div>
-
-
-
       {/* Android App Development Section */}
       <section className="py-20 mb-5 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
             {/* Left Content */}
             <div>
@@ -83,32 +76,30 @@ const MobileAppDevelopmentPage = () => {
                 We specialize in creating high-quality mobile applications that enhance user experience and drive business growth.
               </p>
             </div>
-
             {/* Right Lottie Animation */}
             <div className="flex justify-center mt-4 md:mt-0">
               <Lottie
                 animationData={androidAppAnimation}
                 loop={true}
                 autoplay={true}
-                style={{ width: 450, height: 'auto' }}
+                className="w-full sm:w-[450px] h-auto"
               />
-            </div>
 
+            </div>
           </div>
         </div>
       </section>
-
       {/* Our custom mobile app development service Suite */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[85%]">
-          <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-orange-500 mb-12">
             Our custom mobile app development service Suite
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch shadow-lg rounded-3xl overflow-hidden bg-white">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch shadow-lg rounded-3xl overflow-hidden bg-white">
 
             {/* Left Panel (Scrollable List) */}
-            <div className="bg-orange-500 text-white flex flex-col justify-start overflow-y-auto rounded-l-3xl max-h-[400px] left-scroll ">
+            <div className="bg-orange-500 text-white flex flex-col justify-start overflow-y-auto rounded-tl-3xl rounded-tr-3xl lg:rounded-l-3xl max-h-[400px]">
               {data.map((item) => (
                 <div
                   key={item.id}
@@ -124,9 +115,9 @@ const MobileAppDevelopmentPage = () => {
                 </div>
               ))}
             </div>
-
             {/* Right Panel (Dynamic Content) */}
-            <div className="p-10 flex flex-col justify-center items-center text-center bg-white transition-all duration-500 ease-in-out">
+            {/* <div className="p-10 flex flex-col justify-center items-center text-center bg-white transition-all duration-500 ease-in-out"> */}
+            <div className="p-6 sm:p-10 flex flex-col justify-center items-center text-center bg-white transition-all duration-500 ease-in-out">
               <div className="mb-4">{selected.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-800">{selected.title}</h3>
               <p className="text-gray-700 leading-relaxed">{selected.content}</p>
@@ -134,8 +125,6 @@ const MobileAppDevelopmentPage = () => {
           </div>
         </div>
       </section>
-
-
       {/* Mobile Application Platforms */}
       <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
@@ -143,23 +132,17 @@ const MobileAppDevelopmentPage = () => {
           <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
             Mobile Application Platforms
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {/* Native Apps */}
             <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
               <div className="flex justify-center mb-6">
-                <img
-                  src={nativeApp}
-                  alt="Native Apps"
-                  className="w-20 h-20 object-contain"
-                />
+                <img src={nativeApp} alt="Native Apps" className="w-20 sm:w-24 md:w-28 h-auto object-contain mx-auto" />
               </div>
-              <h3 className="text-xl font-bold text-center mb-4">Native Apps</h3>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-center mb-2 sm:mb-4">Native Apps</h3>
+              <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
                 Our mobile team at APT IT PS creates apps for a specific mobile operating system, such as iOS or Android, the latest development tools and platform-specific programming languages.
               </p>
             </div>
-
             {/* Cross-Platform Apps */}
             <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
               <div className="flex justify-center mb-6">
@@ -174,7 +157,6 @@ const MobileAppDevelopmentPage = () => {
                 Our team builds applications using frameworks including React Native or Flutter. This allows for faster development cycles and code reusability across different operating systems and platforms.
               </p>
             </div>
-
             {/* Web Apps */}
             <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
               <div className="flex justify-center mb-6">
@@ -189,7 +171,6 @@ const MobileAppDevelopmentPage = () => {
                 Apart from cross-platform applications, we develop web-based mobile applications. These are accessible through mobile browsers and offer flexibility in deployment across various devices.
               </p>
             </div>
-
             {/* Hybrid Apps */}
             <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
               <div className="flex justify-center mb-6">
@@ -204,23 +185,19 @@ const MobileAppDevelopmentPage = () => {
                 Combining the capabilities and elements of both native and web applications, our team develops hybrid applications using web technologies packaged as native applications.
               </p>
             </div>
-
           </div>
         </div>
       </section>
-
-
       {/* Our Process & Integrations */}
       <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[90%]">
           <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
             Our Process & Integrations
           </h2>
-          <div className="grid md:grid-cols-3 gap-12 items-center">
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 items-center">
             {/* Left Column - Our Process */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-4 text-left">Our Process</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-left md:text-left">Our Process</h3>
               <div className="space-y-4 text-left text-gray-700">
                 <p><span className="font-semibold text-orange-500">Discovery Phase</span> - We immerse in your business, identify challenges, explore opportunities, and set clear objectives.</p>
                 <p><span className="font-semibold text-orange-500">Design Phase</span> - User-focused, intuitive designs from wireframes to prototypes, ensuring seamless user journeys.</p>
@@ -230,16 +207,10 @@ const MobileAppDevelopmentPage = () => {
                 <p><span className="font-semibold text-orange-500">Maintenance & Support</span> - Ongoing updates, enhancements, and 24/7 support to keep your app thriving.</p>
               </div>
             </div>
-
             {/* Center Column - iPhone Image */}
             <div className="flex items-center justify-center">
-              <img
-                src={iphone}
-                alt="Mobile App Preview"
-                className="w-80 md:w-96 mx-auto"
-              />
+              <img src={iphone} alt="Mobile App Preview" className="w-full sm:w-80 md:w-96 mx-auto" />
             </div>
-
             {/* Right Column - Integrations */}
             <div className="space-y-6">
               <h3 className="text-2xl font-bold mb-4 text-left">Integrations We Offer</h3>
@@ -252,20 +223,16 @@ const MobileAppDevelopmentPage = () => {
                 <p><span className="font-semibold text-orange-500">Messaging & Communication</span> - In-app chat, VoIP, and video conferencing with Twilio, Sendbird, Agora, and WebRTC.</p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
-
-
       {/* Why Choose Section */}
       <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
-          <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-orange-500 mb-12 sm:mb-16">
             Why Choose APT IT Professional Services?
           </h2>
-
-          <div className="grid md:grid-cols-3 gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 items-start">
             {/* Left Column */}
             <div className="space-y-12">
               <div className="text-center">
@@ -285,7 +252,6 @@ const MobileAppDevelopmentPage = () => {
                   all demographics.
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <img
@@ -303,7 +269,6 @@ const MobileAppDevelopmentPage = () => {
                 </p>
               </div>
             </div>
-
             {/* Center Column - Logo */}
             <div className="flex items-center justify-center py-30">
               <div className="w-80 h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center shadow-2xl">
@@ -318,7 +283,6 @@ const MobileAppDevelopmentPage = () => {
                 </div>
               </div>
             </div>
-
             {/* Right Column */}
             <div className="space-y-12">
               <div className="text-center">
@@ -357,13 +321,12 @@ const MobileAppDevelopmentPage = () => {
           </div>
         </div>
       </section>
-
-
       {/* our Tech Eminence Section */}
       <section className="py-16 bg-white">
-        <h2 className="text-orange-500 text-center font-bold mb-10" style={{ fontSize: "35px" }}>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-500 text-center mb-10">
           Our Tech Eminence
         </h2>
+        <img className="inline-block mr-4 sm:mr-6 h-12 sm:h-16" />
 
         {/* First Row - scrolling left */}
         <div className="overflow-hidden relative mb-6">
@@ -380,25 +343,7 @@ const MobileAppDevelopmentPage = () => {
             ))}
           </div>
         </div>
-
-        {/* Second Row - scrolling right */}
-        {/* <div className="overflow-hidden relative">
-    <div className="marquee-reverse">
-      {[goLogo, reactLogo, flutterLogo, pythonLogo, djangoLogo, objectiveCLogo, dotNetLogo, swiftLogo, nodejsLogo, kotlinLogo, javaLogo,
-        goLogo, reactLogo, flutterLogo, pythonLogo, djangoLogo, objectiveCLogo, dotNetLogo, swiftLogo, nodejsLogo, kotlinLogo, javaLogo
-      ].map((logo, index) => (
-        <img
-          key={index}
-          src={logo}
-          alt="Tech Logo"
-          className="inline-block mr-6 h-16"
-        />
-      ))}
-    </div>
-  </div> */}
       </section>
-
-
       {/* Our Engagement Models Section */}
       <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
@@ -409,14 +354,14 @@ const MobileAppDevelopmentPage = () => {
             <p className="text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               We offer flexible engagement models tailored to your product lifecycle, resource needs, and budget.
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {/* Product Development */}
               <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
                 <div className="flex justify-center mb-6">
                   <img src={productChainImg} alt="Product Development" className="w-20 h-20 object-contain" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Product Development</h3>
-                <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Product Development</h3>
+                <p className="text-sm sm:text-base leading-relaxed">
                   Bring us your idea, and we'll transform it into a fully functional, market-ready product—handling everything from architecture to launch.
                 </p>
               </div>
@@ -446,9 +391,6 @@ const MobileAppDevelopmentPage = () => {
           </div>
         </div>
       </section>
-
-
-
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -462,5 +404,4 @@ const MobileAppDevelopmentPage = () => {
     </div>
   );
 };
-
 export default MobileAppDevelopmentPage;
