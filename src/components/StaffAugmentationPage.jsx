@@ -47,8 +47,9 @@ const StaffAugmentationPage = () => {
 
       <div className="container mx-auto px-4 py-16 w-full lg:w-10/12">
         <section className="py-20 bg-white mb-10">
-          <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[100%]">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto px-4 w-full lg:w-10/12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+
               {/* Text Content */}
               <div>
                 <h2 className="text-4xl font-bold text-orange-500 mb-6">

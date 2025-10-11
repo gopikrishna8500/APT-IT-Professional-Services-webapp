@@ -72,7 +72,7 @@ const MobileAppDevelopmentPage = () => {
       {/* Android App Development Section */}
       <section className="py-20 mb-5 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
 
             {/* Left Content */}
             <div>

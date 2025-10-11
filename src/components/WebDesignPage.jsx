@@ -35,7 +35,6 @@ const WebDesignPage = () => {
   const [animationData, setAnimationData] = useState(null);
 
   useEffect(() => {
-    // ensure top-of-page on mount
     window.scrollTo(0, 0);
 
     let mounted = true;
@@ -43,9 +42,7 @@ const WebDesignPage = () => {
       .then((mod) => {
         if (mounted) setAnimationData(mod.default);
       })
-      .catch(() => {
-        // ignore load errors for now
-      });
+      .catch(() => {});
 
     return () => {
       mounted = false;
@@ -57,8 +54,6 @@ const WebDesignPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-
-  // ✅ Use useMemo to prevent re-creation on each render
   const coreWebData = useMemo(
     () => [
       {
@@ -123,7 +118,6 @@ const WebDesignPage = () => {
 
   const [selectedCore, setSelectedCore] = useState(coreWebData[0]);
 
-  // ✅ Memoized animation config to prevent reloading JSON file repeatedly
   const lottieOptions = useMemo(
     () => ({
       animationData: webDevAnimation,
@@ -136,46 +130,42 @@ const WebDesignPage = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col justify-between">
       {/* Banner Section */}
-       <div
+      <div
         className="relative py-20 bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
-             "url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200')",
+            "url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200')",
         }}
       >
-        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Content */}
         <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">Web Design & Development</h1>
-          <div className="flex items-center justify-center space-x-2 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 mb-4">
+            Web Design & Development
+          </h1>
+          <div className="flex items-center justify-center space-x-2 text-white text-sm sm:text-base">
             <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
             <span className="text-orange-400">›</span>
             <span className="text-orange-500">Web Design & Development</span>
           </div>
         </div>
       </div>
+
       {/* Intro Section */}
-      <div className="container px-4 py-16 lg:w-10/12 mx-auto">
-        <section className="py-20 bg-white mb-10">
+      <div className="container px-4 py-16 mx-auto lg:w-10/12">
+        <section className="py-12 bg-white mb-10">
           <div className="max-w-screen-xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Text Content */}
-              <div>
-                <h2 className="text-4xl font-bold text-orange-500 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-4">
                   Web Design & Development
                 </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  We craft visually stunning and highly functional websites that
-                  deliver seamless user experiences and empower businesses to
-                  thrive online.
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                  We craft visually stunning and highly functional websites that deliver seamless
+                  user experiences and empower businesses to thrive online.
                 </p>
               </div>
-
-              {/* Optimized Lottie Animation */}
-              <div className="flex justify-center mt-4 md:mt-0">
-                <div className="w-[400px] h-auto">
+              <div className="flex justify-center md:justify-end mt-6 md:mt-0">
+                <div className="w-full sm:w-[400px] h-auto">
                   <Lottie {...lottieOptions} style={{ width: "100%" }} />
                 </div>
               </div>
@@ -186,33 +176,31 @@ const WebDesignPage = () => {
         {/* Core Web Offerings */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[85%]">
-            <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-orange-500 mb-8 sm:mb-12">
               Our Core Custom Web Development Offerings
             </h2>
-            <div className="grid lg:grid-cols-2 gap-8 items-stretch shadow-lg rounded-3xl overflow-hidden bg-white">
-              {/* Left Panel */}
-              <div className="bg-orange-500 text-white flex flex-col overflow-y-auto rounded-l-3xl max-h-[400px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch shadow-lg rounded-3xl overflow-hidden bg-white">
+              <div className="bg-orange-500 text-white flex flex-col overflow-y-auto rounded-t-3xl lg:rounded-l-3xl max-h-[400px] lg:max-h-full">
                 {coreWebData.map((item) => (
                   <div
                     key={item.id}
-                    className={`cursor-pointer px-6 py-5 text-center text-lg font-medium transition-all border-b border-orange-400/50 ${selectedCore.id === item.id
+                    className={`cursor-pointer px-4 sm:px-6 py-4 text-center sm:text-lg font-medium transition-all border-b border-orange-400/50 ${
+                      selectedCore.id === item.id
                         ? "bg-orange-600 font-bold"
                         : "hover:bg-orange-600"
-                      }`}
+                    }`}
                     onClick={() => setSelectedCore(item)}
                   >
                     {item.title}
                   </div>
                 ))}
               </div>
-
-              {/* Right Panel */}
-              <div className="p-10 flex flex-col justify-center items-center text-center bg-white transition-all duration-500 ease-in-out">
+              <div className="p-6 sm:p-10 flex flex-col justify-center items-center text-center bg-white transition-all duration-500 ease-in-out">
                 <div className="mb-4 text-4xl">{selectedCore.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">
                   {selectedCore.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                   {selectedCore.content}
                 </p>
               </div>
@@ -222,34 +210,53 @@ const WebDesignPage = () => {
 
         {/* Lifecycle Section */}
         <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 text-center mb-8 sm:mb-12">
             Full Lifecycle Web Development
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
-              { img: businessAnalysisImg, title: "Business Analysis", desc: "We begin with deep-dive discovery sessions, stakeholder interviews, and market research to define goals, identify challenges, and align the product vision with your business needs." },
-              { img: strategicImg, title: "Strategic Planning", desc: "Our planning process includes scope definition, timeline estimation, resource allocation, and roadmap creation—setting the foundation for an efficient, result-oriented engagement." },
-              { img: agileImg, title: "Agile Development", desc: "We use Agile methodologies to enable iterative delivery, continuous feedback, and flexible execution. This ensures reduced risk, improved product quality, and faster time to market." },
-              { img: commitmentImg, title: "Commitment to Timelines", desc: "Guided by ISO-compliant standards and best practices, our team delivers on every milestone with punctuality, transparency & dedication making us a trusted long-term partner." },
+              {
+                img: businessAnalysisImg,
+                title: "Business Analysis",
+                desc: "We begin with deep-dive discovery sessions, stakeholder interviews, and market research to define goals, identify challenges, and align the product vision with your business needs.",
+              },
+              {
+                img: strategicImg,
+                title: "Strategic Planning",
+                desc: "Our planning process includes scope definition, timeline estimation, resource allocation, and roadmap creation—setting the foundation for an efficient, result-oriented engagement.",
+              },
+              {
+                img: agileImg,
+                title: "Agile Development",
+                desc: "We use Agile methodologies to enable iterative delivery, continuous feedback, and flexible execution. This ensures reduced risk, improved product quality, and faster time to market.",
+              },
+              {
+                img: commitmentImg,
+                title: "Commitment to Timelines",
+                desc: "Guided by ISO-compliant standards and best practices, our team delivers on every milestone with punctuality, transparency & dedication making us a trusted long-term partner.",
+              },
             ].map((card, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+              <div
+                key={idx}
+                className="bg-white rounded-lg shadow-lg p-4 sm:p-6 text-center hover:shadow-xl transition-shadow"
+              >
                 <div className="flex justify-center mb-4">
                   <img
                     src={card.img}
                     alt={card.title}
-                    className="w-16 h-16 object-contain"
+                    className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-4">{card.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">{card.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Tech Eminence */}
+        {/* Tech Logos */}
         <section className="py-16 bg-white">
-          <h2 className="text-orange-500 text-center font-bold mb-10 text-[35px]">
+          <h2 className="text-orange-500 text-center font-bold mb-10 text-[28px] sm:text-[35px]">
             Our Tech Eminence
           </h2>
           <div className="overflow-hidden relative mb-6">
@@ -260,7 +267,6 @@ const WebDesignPage = () => {
                 flutterLogo,
                 pythonLogo,
                 djangoLogo,
-                // ObjectiveCImg,
                 dotNetLogo,
                 swiftLogo,
                 nodejsLogo,
@@ -271,7 +277,7 @@ const WebDesignPage = () => {
                   key={index}
                   src={logo}
                   alt="Tech Logo"
-                  className="inline-block mr-6 h-16"
+                  className="inline-block mr-4 sm:mr-6 h-12 sm:h-16"
                 />
               ))}
             </div>
@@ -280,14 +286,13 @@ const WebDesignPage = () => {
 
         {/* Engagement Models */}
         <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6 sm:mb-12">
             Our Engagement Models
           </h2>
-          <p className="text-gray-500 text-center mb-12 max-w-3xl mx-auto">
-            We offer flexible engagement models tailored to your product
-            lifecycle, resource needs, and budget.
+          <p className="text-gray-500 text-center mb-8 sm:mb-12 max-w-3xl mx-auto text-sm sm:text-base">
+            We offer flexible engagement models tailored to your product lifecycle, resource needs, and budget.
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 img: productChainImg,
@@ -307,19 +312,19 @@ const WebDesignPage = () => {
             ].map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-all duration-300"
+                className="bg-white rounded-lg shadow-lg p-6 sm:p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-all duration-300"
               >
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-4 sm:mb-6">
                   <img
                     src={card.img}
                     alt={card.title}
-                    className="w-20 h-20 object-contain"
+                    className="w-16 sm:w-20 h-16 sm:h-20 object-contain"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">
+                <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 group-hover:text-white transition-colors">
                   {card.title}
                 </h3>
-                <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
+                <p className="text-orange-500 group-hover:text-white text-sm sm:text-base leading-relaxed transition-colors">
                   {card.desc}
                 </p>
               </div>
@@ -336,8 +341,6 @@ const WebDesignPage = () => {
       >
         <ArrowUp className="w-6 h-6" />
       </button>
-
-
     </div>
   );
 };
