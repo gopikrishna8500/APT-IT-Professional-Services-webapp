@@ -35,8 +35,8 @@ const StaffAugmentationPage = () => {
 
         {/* Content */}
         <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">Staff Augumentation</h1>
-          <div className="flex items-center justify-center space-x-2 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 mb-4">Staff Augmentation</h1>
+          <div className="flex items-center justify-center space-x-2 text-white text-sm sm:text-base">
             <span className="hover:text-orange-400 transition-colors cursor-pointer">Home</span>
             <span className="text-orange-400">›</span>
             <span className="text-orange-500">Staff Augumentation</span>
@@ -52,15 +52,15 @@ const StaffAugmentationPage = () => {
 
               {/* Text Content */}
               <div>
-                <h2 className="text-4xl font-bold text-orange-500 mb-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 mb-4">
                   Staff Augmentation
                 </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
                   Our recruitment arm keeps evolving. At APT IT Professional
                   Services, we don't just fill roles. We align with your vision of
                   business transformation.
                 </p>
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                   It is not about the costs — it is about capability, control and
                   how fast you want to lead in this ever changing tech marketplace.
                 </p>
@@ -68,7 +68,7 @@ const StaffAugmentationPage = () => {
 
               {/* Lottie Animation */}
               <div className="flex justify-center mt-4 md:mt-0">
-                <div className="w-[450px] h-auto">
+                <div className="w-full sm:w-[400px] md:w-[450px] h-auto">
                   <Lottie
                     animationData={recruitmentAnimation}
                     loop
@@ -87,20 +87,21 @@ const StaffAugmentationPage = () => {
           <p className="text-gray-500 text-center mb-12 max-w-3xl mx-auto">
             We offer flexible engagement models tailored to your product lifecycle, resource needs, and budget.
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
               <div className="flex justify-center mb-6">
-                <img src={productChainImg} alt="Product Development" className="w-20 h-20 object-contain" />
+                <img src={productChainImg} alt="Product Development" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Product Development</h3>
-              <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 group-hover:text-white transition-colors">Product Development</h3>
+              <p className="text-orange-500 group-hover:text-white text-sm sm:text-base leading-relaxed transition-colors">
                 Bring us your idea, and we'll transform it into a fully functional, market-ready product—handling everything from architecture to launch.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
               <div className="flex justify-center mb-6">
-                <img src={teamLeaderImg} alt="Team Extension" className="w-20 h-20 object-contain" />
+                {/* <img src={teamLeaderImg} alt="Team Extension" className="w-20 h-20 object-contain" /> */}
+                <img src={teamLeaderImg} alt="Team Extension" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Team Extension</h3>
               <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
@@ -110,7 +111,8 @@ const StaffAugmentationPage = () => {
 
             <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
               <div className="flex justify-center mb-6">
-                <img src={softwareEngineerImg} alt="Dedicated Development Team" className="w-20 h-20 object-contain" />
+                {/* <img src={softwareEngineerImg} alt="Dedicated Development Team" className="w-20 h-20 object-contain" /> */}
+                <img src={softwareEngineerImg} alt="Dedicated Development Team" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Dedicated Development Team</h3>
               <p className="text-orange-500 group-hover:text-white leading-relaxed transition-colors">
@@ -123,14 +125,14 @@ const StaffAugmentationPage = () => {
         <div className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Our Model
               </h2>
-              <p className="text-gray-500 leading-relaxed mb-6">
+              <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
                 If you are planning for long-term innovation or want to build proprietary systems, having a dedicated offshore team is always the best choice.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">Our model helps you -</p>
-              <ul className="text-gray-500 space-y-2 mb-6">
+              <ul className="text-gray-500 text-sm sm:text-base space-y-1 mb-4">
                 <li>Establish team continuity and ownership over your products and services</li>
                 <li>Build an environment aligned with the goals of your brand.</li>
                 <li>Ensure deep domain understanding and long-term efficiency.</li>
@@ -145,11 +147,7 @@ const StaffAugmentationPage = () => {
               </ul>
             </div>
             <div className="flex justify-center">
-              <img
-                src={modelImg}
-                alt="Our Model"
-                className="w-full max-w-md rounded-lg shadow-lg"
-              />
+             <img src={modelImg} alt="Our Model" className="w-full max-w-md rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -310,16 +308,16 @@ const StaffAugmentationPage = () => {
         </div>
 
         <div className="bg-gradient-to-b from-white to-gray-50 py-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 mb-4">
             Need some assistance in selecting what works best for you?
           </h2>
-          <p className="text-gray-500 text-lg mb-4 max-w-3xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-base md:text-lg mb-4 max-w-3xl mx-auto">
             At APT IT Professional Services, we know the importance of customization. Our tech team of managers and strategists are here to help you with a concrete roadmap and help you <span className="font-bold italic text-gray-600">Build Your Own Team</span>.
           </p>
-          <p className="text-gray-500 text-lg mb-8">
+         <p className="text-gray-500 text-sm sm:text-base md:text-lg mb-8">
             Talk to functional consultants and we will guide you to the smartest fit!
           </p>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md text-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
+         <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base md:text-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
             <Link to="/contact-us">
               Contact Us
             </Link>
@@ -329,10 +327,10 @@ const StaffAugmentationPage = () => {
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+       className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-orange-500 hover:bg-orange-600 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="w-6 h-6" />
+        <ArrowUp className="w-5 sm:w-6 h-5 sm:h-6" />
       </button>
     </div>
   );
