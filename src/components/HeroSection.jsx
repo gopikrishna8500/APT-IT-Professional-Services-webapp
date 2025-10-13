@@ -117,90 +117,50 @@
 // export default HeroSection;
 
 
-
-
-
-
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import backgroundVideo from "../assets/digital-marketing-bg.mp4";
+
 const HeroSection = () => {
-  const videoRef = useRef(null);
-  const [offset, setOffset] = useState(0);
-  const [fadeIn, setFadeIn] = useState(false);
-
-  // Parallax scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setOffset(scrollY * 0.3);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Fade-in effect
-  useEffect(() => {
-    setFadeIn(true);
-  }, []);
-
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden -mt-16 lg:-mt-20"
+      className="relative min-h-screen  flex items-center justify-start overflow-hidden bg-[#02122b]"
     >
-      {/* YouTube iframe video background with increased brightness */}
+      {/* 🔹 Background Video */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <video
-          ref={videoRef}
-          className="absolute top-0 left-0 w-full h-full object-cover brightness-150"
+          className="w-full h-full object-cover brightness-250"
+          src={backgroundVideo}
           autoPlay
           loop
           muted
           playsInline
-        >
-          <source src={backgroundVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#02122b]/80"></div>
       </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-blue/70"></div>
-
-      {/* Content */}
-      <div className="relative z-10  text-left  px-6 lg:px-0  lg:w-10/12 mx-auto">
-        <h1
-          className={`text-white  text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold leading-tight drop-shadow-2xl transition-opacity duration-1000 ${
-            fadeIn ? "opacity-100" : "opacity-0"
-          }`}
-        >
+      {/* 🔹 Content */}
+      <div className="relative z-10 w-full max-w-10xl mx-auto px-6 sm:px-10 lg:px-20 py-20 text-center lg:text-left">
+        <h1 className="text-white text-2xl sm:text-2xl lg:text-6xl font-extrabold mb-4 leading-tight">
           Welcome to APT IT Professional Services
         </h1>
 
-        <p
-          className={`text-white text-lg lg:text-xl font-semibold mb-8 drop-shadow-lg transition-opacity duration-1500 delay-300 ${
-            fadeIn ? "opacity-100" : "opacity-0"
-          }`}
-        >
+        <p className="text-white text-lg sm:text-xl font-semibold mb-6">
           <b>Architecting The Digital Change</b>
         </p>
 
-        <p
-          className={`text-white text-lg lg:text-lg mb-4 leading-relaxed drop-shadow-lg transition-opacity duration-1500 delay-500 ${
-            fadeIn ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          At APT IT Professional Services, we leverage the latest technology
-          to propel your business forward to make it scalable, secure, and
-          future-ready. Powered by engineers with a problem-solving mindset,
-          we deliver outcomes that go beyond expectations.
+        <p className="text-white/90 text-base sm:text-lg leading-relaxed max-w-8xl mb-8">
+          At APT IT Professional Services, we leverage the latest technology to
+          propel your business forward to make it scalable, secure, and
+          future-ready. Powered by engineers with a problem-solving mindset, we
+          deliver outcomes that go beyond expectations.
         </p>
 
         <Link
           to="/about"
-          className={`inline-block bg-orange-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md text-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg transition-opacity duration-1500 delay-700 ${
-            fadeIn ? "opacity-100" : "opacity-0"
-          }`}
+          className="inline-block bg-[#f7931e] hover:bg-[#ff8800] text-white font-semibold text-lg px-8 py-3 rounded-md shadow-md transition-all duration-300 hover:scale-105"
         >
           Read More
         </Link>
@@ -210,5 +170,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-

@@ -18,6 +18,7 @@ import CareersPage from "./components/CareersPage";
 import WebDesignPage from "./components/WebDesignPage";
 import StaffAugmentationPage from "./components/StaffAugmentationPage";
 import MobileAppDevelopmentPage from "./components/MobileAppDevelopmentPage";
+import PortfolioPage from "./components/PortfolioPage";
 
 // Privacy Policy Page (simple placeholder)
 const PrivacyPolicyPage = () => {
@@ -62,8 +63,8 @@ function App() {
           <Route path="/webdesign" element={<WebDesignPage />} />
           <Route path="/staff-augmentation" element={<StaffAugmentationPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
         </Routes>
-
         {/* Footer always visible */}
         <Footer />
       </div>
