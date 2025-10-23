@@ -1,232 +1,232 @@
-import React from "react";
-import image from '../assets/gc.jpeg';
-import image1 from '../assets/fi.jpeg';
-import image2 from '../assets/tci.jpeg';
-import image3 from '../assets/gai.jpeg';
-import image4 from '../assets/wie.jpeg';
-import image5 from '../assets/thechat.jpeg';
+import React, { useState, useEffect } from "react";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import aboutImg1 from '../assets/about-img21.png';
+
+// Expertise images
+import appDevelopmentImg from "../assets/Techeminence/app-development.png";
+import webDevelopmentImg from "../assets/Techeminence/development.svg";
+import staffManagementImg from "../assets/Techeminence/staff-management.svg";
+
+// Client logos
+import logo1 from "../assets/Client-logos/Untitled design (1).png";
+import logo2 from "../assets/Client-logos/Untitled design (2).png";
+import logo3 from "../assets/Client-logos/Untitled design (3).png";
+import logo4 from "../assets/Client-logos/Untitled design (4).png";
+import logo5 from "../assets/Client-logos/Untitled design (5).png";
+import logo6 from "../assets/Client-logos/Untitled design (6).png";
+import logo7 from "../assets/Client-logos/Untitled design (7).png";
+import logo8 from "../assets/Client-logos/Untitled design (8).png";
+import logo9 from "../assets/Client-logos/Untitled design (9).png";
+import logo10 from "../assets/Client-logos/Untitled design (10).png";
+import logo11 from "../assets/Client-logos/Untitled design (11).png";
+import logo12 from "../assets/Client-logos/Untitled design (12).png";
+import logo13 from "../assets/Client-logos/Untitled design(13).png";
+
 const PortfolioPage = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section - Our Expertise */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-8 tracking-wider">OUR EXPERTISE</h1>
-          <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-lg">
-            Zerodot Plus is a company dedicated to empowering entities and individuals through our expertise in
-            information, technology platforms, skill-sets, network, branding & advertising, social media optimization, SEO,
-            performance marketing and future advancements. Our goal is to create an ecosystem of a progressive
-            population that contributes globally.
-          </p>
-          <div className="mt-8 w-32 h-1 bg-orange-500 mx-auto"></div>
-        </div>
-      </section>
+    const allLogos = [
+        logo1, logo2, logo3, logo4, logo5, logo6,
+        logo7, logo8, logo9, logo10, logo11, logo12, logo13,
+    ];
 
-      {/* Authorised Partners Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-8 tracking-wider">AUTHORISED PARTNERS</h2>
-          <p className="text-gray-600 text-center leading-relaxed max-w-4xl mx-auto mb-16 text-lg">
-            Zerodot Plus harnesses cutting-edge technology and advanced platforms to drive projects in website
-            development, e-commerce development, digital marketing, brand design, advertising, performance
-            marketing, and more. We are the authorised service partners for the Zoho and Wix ecosystem.
-          </p>
+    const [currentSet, setCurrentSet] = useState(0);
 
-          {/* Partner Cards */}
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            {/* Zoho Partner Card */}
-            <div className="text-center">
-              <div className="mb-6 flex justify-center">
-                <div className="bg-white p-8 rounded-lg shadow-md">
-                  <img
-                    src="https://www.zoho.com/sites/zweb/images/zoho-logo.svg"
-                    alt="Zoho Authorized Partner"
-                    className="h-24 w-auto mx-auto mb-4"
-                  />
-                  <div className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded inline-block">
-                    Zoho Authorized Partner
-                  </div>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-4 tracking-wide">ZOHO SERVICE PARTNERS</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Starting with Zoho Sites & Zoho Commerce, Zoho authorise Zerodot Plus to serve businesses across{" "}
-                <span className="underline">Zoho products</span> that can transform your tech and digital presence and help
-                accelerate your growth
-              </p>
-            </div>
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSet((prev) => (prev + 1) % Math.ceil(allLogos.length / 6));
+        }, 4000);
+        return () => clearInterval(interval);
+    }, [allLogos.length]);
 
-            {/* Wix Partner Card */}
-            <div className="text-center">
-              <div className="mb-6 flex justify-center">
-                <div className="bg-white p-8 rounded-lg shadow-md">
-                  <div className="border-4 border-black rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-4">
-                    <div className="text-center">
-                      <div className="text-xs font-bold mb-1">WIX PARTNER</div>
-                      <div className="text-4xl font-bold">Wix</div>
-                      <div className="text-xs font-bold">WIX PARTNER</div>
+    const startIndex = currentSet * 6;
+    const visibleLogos = allLogos.slice(startIndex, startIndex + 6);
+
+    return (
+        <div className="min-h-screen bg-white">
+            {/* Banner with image */}
+            <div
+                className="relative bg-cover bg-center py-20"
+                style={{ backgroundImage: `url(${aboutImg1})` }}
+            >
+                <div className="absolute inset-0 bg-black opacity-30"></div>
+                <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+                    <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                        Portfolio
+                    </h1>
+                    <div className="flex items-center justify-center text-white">
+                        <span className="hover:text-orange-400 transition-colors cursor-pointer">
+                            Home
+                        </span>
+                        <ChevronRight className="h-4 w-4 mx-2 text-orange-400" />
+                        <span className="text-orange-300 font-semibold">Portfolio</span>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-4 tracking-wide">WIX SERVICE PARTNERS</h3>
-              <p className="text-gray-600 leading-relaxed">
-                With an advanced web ecosystem for professionals and small businesses, Wix offer exemplary web and
-                marketing solutions via Zerodot Plus, the WIX pioneers.
-              </p>
             </div>
-          </div>
 
-          <div className="mt-12 w-32 h-1 bg-orange-500 mx-auto"></div>
+            {/* OUR EXPERTISE Section */}
+            <section className="pt-24 pb-16 px-4">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h1 className="text-5xl font-bold mb-8 tracking-wider text-slate-800">
+                        OUR EXPERTISE
+                    </h1>
+                    <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-lg">
+                        APT IT Professional Services is a trusted partner for businesses
+                        seeking digital transformation. We specialize in cutting-edge
+                        mobile app development, custom web solutions, cloud infrastructure,
+                        and IT consulting services designed to optimize operations and
+                        accelerate growth.
+                    </p>
+                    <div className="mt-8 w-32 h-1 bg-orange-500 mx-auto"></div>
+                </div>
+
+                {/* Expertise Cards */}
+                <div className="max-w-6xl mx-auto mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                        {/* Mobile App Development */}
+                        <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-white">
+                                    <img
+                                        src={appDevelopmentImg}
+                                        alt="Mobile App Development"
+                                        className="w-8 h-8"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">
+                                Mobile App Development
+                            </h3>
+                            <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white">
+                                We engineer high-performance, custom mobile apps that drive
+                                massive user acquisition and ensure long-term market
+                                leadership.
+                            </p>
+                            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors">
+                                <Link to="/mobile">Read More</Link>
+                            </button>
+                        </div>
+
+                        {/* Web Development */}
+                        <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-white">
+                                    <img
+                                        src={webDevelopmentImg}
+                                        alt="Web Development"
+                                        className="w-8 h-8"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">
+                                Web Development
+                            </h3>
+                            <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white">
+                                We build intuitive, scalable web platforms designed to convert
+                                visitors into loyal customers and accelerate your business
+                                growth.
+                            </p>
+                            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors">
+                                <Link to="/webdesign">Read More</Link>
+                            </button>
+                        </div>
+
+                        {/* Staff Augmentation */}
+                        <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-white">
+                                    <img
+                                        src={staffManagementImg}
+                                        alt="Staff Augmentation"
+                                        className="w-8 h-8"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-white">
+                                Staff Augmentation
+                            </h3>
+                            <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white">
+                                We provide elite, vetted developers on-demand, enabling you to
+                                rapidly scale teams, modernize systems, and accelerate
+                                transformation.
+                            </p>
+                            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors">
+                                <Link to="/staff-augmentation">Read More</Link>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Authorised Partners */}
+            <h2 className="text-5xl font-bold text-center mb-8 tracking-wider text-gray-800">
+                AUTHORISED PARTNERS
+            </h2>
+            <p className="text-gray-600 text-center leading-relaxed max-w-4xl mx-auto mb-16 text-lg">
+                APT IT Professional Services harnesses cutting-edge technologies and advanced platforms
+                to deliver impactful solutions in web and mobile app development, cloud infrastructure,
+                DevOps automation, and IT staffing. We collaborate with trusted technology partners to
+                ensure innovation, quality, and scalability for our clients.
+            </p>
+
+            {/* About Us */}
+            <div className="mt-16 text-center max-w-4xl mx-auto">
+                <h2 className="text-5xl font-bold mb-16 tracking-wider text-slate-800">
+                    ABOUT US
+                </h2>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                    Established in 2016, APT IT Professional Services has grown from a tech recruitment
+                    agency into a dynamic, forward-thinking IT enterprise that specializes in delivering
+                    custom software development, enterprise-grade solutions, and strategic IT consulting
+                    services. Headquartered in New York, we bridge global expertise in an agile environment
+                    to help our clients accelerate innovation and drive business growth.
+                </p>
+            </div>
+            {/* Consultation Section */}
+            <section className="py-16 px-4 bg-gray-50">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 tracking-wide">
+                        Let’s Transform Your Ideas Into Reality
+                    </h2>
+                    <p className="text-gray-600 mb-8 text-lg max-w-3xl mx-auto leading-relaxed">
+                        At APT IT Professional Services, we’re here to help you navigate your digital transformation journey.
+                        Feel free to contact us for expert consultation and guidance tailored to your business needs.
+                    </p>
+                    <Link
+                        to="/contact-us"
+                        className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-colors"
+                    >
+                        Free Consultation Now
+                    </Link>
+                </div>
+            </section>
+
+            {/* Clients Section */}
+            <section className="py-16 px-4 bg-gray-50">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-5xl font-bold mb-16 tracking-wider text-slate-800">
+                        OUR CLIENTS
+                    </h2>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center justify-center transition-all duration-500">
+                        {visibleLogos.map((logo, index) => (
+                            <div key={index} className="flex justify-center">
+                                <img
+                                    src={logo}
+                                    alt={`Client ${index + 1}`}
+                                    className="h-20 w-auto object-contain transition-transform duration-500 hover:scale-105"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-10 text-gray-500 text-sm italic">
+                        Showing {startIndex + 1}–
+                        {Math.min(startIndex + 6, allLogos.length)} of {allLogos.length} clients
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-
-      {/* Tool Stack Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-4 tracking-wider">TOOL</h2>
-          <h2 className="text-5xl font-bold text-center mb-16 tracking-wider">STACK</h2>
-
-          {/* Green Consultation Banner */}
-          <div className="bg-green-500 text-white text-center py-3 mb-16 max-w-md mx-auto">
-            <span className="text-xl font-bold">Free Consultation Now</span>
-          </div>
-
-          {/* Tech Stack Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center max-w-5xl mx-auto">
-            {/* Row 1 */}
-            <div className="flex justify-center">
-              <img
-                src="https://www.zoho.com/sites/zweb/images/zoho-logo.svg"
-                alt="Zoho"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://logo.clearbit.com/hostinger.com"
-                alt="Hostinger"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://www.mysql.com/common/logos/logo-mysql-170x115.png"
-                alt="MySQL"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-
-            {/* Row 2 */}
-            <div className="flex justify-center">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                alt="AWS"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={image}
-                alt="Google Cloud"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png"
-                alt="Meta for Business"
-                className="h-12 w-auto object-contain"
-              />
-            </div>
-
-            {/* Row 3 */}
-            <div className="flex justify-center">
-              <img
-                src="https://firebase.google.com/images/brand-guidelines/logo-logomark.png"
-                alt="Firebase"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={image1}
-                alt="Flutter"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://resources.jetbrains.com/storage/products/company/brand/logos/AppCode_icon.png"
-                alt="AppCode"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Tools Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center max-w-5xl mx-auto">
-            {/* Row 1 */}
-            <div className="flex justify-center">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
-                alt="Figma"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={image2}
-                alt="Canva"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={image3}
-                alt="Google Ads"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-
-            {/* Row 2 */}
-            <div className="flex justify-center">
-              <img
-                src="https://s.w.org/style/images/about/WordPress-logotype-standard.png"
-                alt="WordPress"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={image4}
-                alt="Wix"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-             <div className="flex justify-center">
-              <img
-                src={image5}
-                alt="chatgpt"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            {/* <div className="flex justify-center">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 border-4 border-white rounded-full" style={{
-                  background: 'repeating-conic-gradient(from 0deg, white 0deg 45deg, black 45deg 90deg)'
-                }}></div>
-              </div>
-            </div> */}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    );
 };
 
 export default PortfolioPage;

@@ -130,7 +130,7 @@ const HeroSection = () => {
       {/* 🔹 Background Video */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <video
-          className="w-full h-full object-cover brightness-250"
+          className="w-full h-full object-cover brightness-300"
           src={backgroundVideo}
           autoPlay
           loop
