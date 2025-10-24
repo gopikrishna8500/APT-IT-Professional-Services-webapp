@@ -222,11 +222,10 @@ const Header = () => {
                   >
                     Contact Us
                   </Link>
-                  <div className="hidden lg:flex items-center space-x-6">
-                    <div className="flex items-center space-x-2 text-orange-500">
-                      <Phone className="w-4 h-4" />
-                      <span className="text-sm font-bold">+1 (718) 360-4995</span>
-                    </div>
+
+                  <div className="flex items-center space-x-2 text-orange-400 pt-2">
+                    <Phone className="w-4 h-4" />
+                    <span className="text-sm font-bold">+1 (718) 360-4995</span>
                     <button className="ml-6 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold text-white">
                       <Mail className="w-4 h-4" />
                       <span>
@@ -234,6 +233,8 @@ const Header = () => {
                       </span>
                     </button>
                   </div>
+
+
                 </nav>
               </motion.div>
             )}
