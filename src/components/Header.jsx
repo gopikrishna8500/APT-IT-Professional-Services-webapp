@@ -209,6 +209,12 @@ const Header = () => {
                   >
                     Careers
                   </Link>
+                   <Link
+                to="/portfolio"
+                className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
+              >
+                Portfolio
+              </Link>
                   <Link
                     to="/contact-us"
                     className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
