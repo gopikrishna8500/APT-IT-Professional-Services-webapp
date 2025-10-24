@@ -14,7 +14,7 @@ const Header = () => {
       {/* Fixed Header */}
       {/* <header className="bg-slate-900 text-white fixed w-full top-0 left-0 z-50 shadow-md h-16 lg:h-20"> */}
       <header className="fixed w-full top-0 left-0 z-50 bg-slate-900  text-white shadow-md h-16 lg:h-20 transition-all duration-300">
-      <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-0.5">
@@ -105,7 +105,7 @@ const Header = () => {
                 Careers
               </Link>
 
-               <Link
+              <Link
                 to="/portfolio"
                 className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
               >
@@ -209,12 +209,12 @@ const Header = () => {
                   >
                     Careers
                   </Link>
-                   <Link
-                to="/portfolio"
-                className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
-              >
-                Portfolio
-              </Link>
+                  <Link
+                    to="/portfolio"
+                    className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
+                  >
+                    Portfolio
+                  </Link>
                   <Link
                     to="/contact-us"
                     className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
@@ -222,10 +222,17 @@ const Header = () => {
                   >
                     Contact Us
                   </Link>
-
-                  <div className="flex items-center space-x-2 text-orange-400 pt-2">
-                    <Phone className="w-4 h-4" />
-                    <span className="text-sm font-bold">+1 (718) 360-4995</span>
+                  <div className="hidden lg:flex items-center space-x-6">
+                    <div className="flex items-center space-x-2 text-orange-500">
+                      <Phone className="w-4 h-4" />
+                      <span className="text-sm font-bold">+1 (718) 360-4995</span>
+                    </div>
+                    <button className="ml-6 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold text-white">
+                      <Mail className="w-4 h-4" />
+                      <span>
+                        <a href="mailto:info@aptitps.com">Mail Us</a>
+                      </span>
+                    </button>
                   </div>
                 </nav>
               </motion.div>
