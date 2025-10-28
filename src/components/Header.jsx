@@ -129,7 +129,9 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-orange-400">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm font-bold">+1 (718) 360-4995</span>
+                <a href="tel:+17183604995" className="hover:text-orange-500 transition-colors">
+                   <span className="text-sm font-bold">+1 (718) 360-4995</span>
+                  </a>
               </div>
               <button className="ml-6 bg-orange-500 hover:bg-red-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
                 <Mail className="w-4 h-4" />
