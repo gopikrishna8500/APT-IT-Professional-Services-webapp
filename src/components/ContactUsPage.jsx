@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, Clock, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import emailjs from "emailjs-com";
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
@@ -16,11 +17,30 @@ const ContactUsPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
-  };
+ const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs.send(
+    "YOUR_SERVICE_ID",     // 🔥 Replace
+    "YOUR_TEMPLATE_ID",    // 🔥 Replace
+    {
+      fullName: formData.fullName,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    },
+    "YOUR_PUBLIC_KEY"      // 🔥 Replace
+  )
+  .then(() => {
+    alert("✅ Your message has been successfully sent!");
+    setFormData({ fullName: "", email: "", subject: "", message: "" });
+  })
+  .catch((error) => {
+    console.log(error);
+    alert("❌ Something went wrong. Please try again.");
+  });
+};
+
 
   return (
     <div className="min-h-screen bg-gray-50">
