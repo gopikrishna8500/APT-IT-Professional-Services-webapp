@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer >
       {/* Main Footer */}
-      <div className="bg-orange-50 py-12">
+      <div className="bg-orange-100 py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Popular Links */}
