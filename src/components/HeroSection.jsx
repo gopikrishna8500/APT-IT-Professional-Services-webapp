@@ -160,7 +160,7 @@ const HeroSection = () => {
 
         <Link
           to="/about"
-          className="inline-block bg-[#f7931e] hover:bg-[#ff8800] text-white font-semibold text-lg px-8 py-3 rounded-md shadow-md transition-all duration-300 hover:scale-105"
+          className="inline-block bg-orange-500 hover:bg-red-600 text-white font-semibold text-lg px-8 py-3 rounded-md shadow-md transition-all duration-300 hover:scale-105"
         >
           Read More
         </Link>
