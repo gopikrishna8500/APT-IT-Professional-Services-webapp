@@ -39,6 +39,12 @@ const CareersPage = () => {
       postedTime: '1M ago'
     }
   ];
+  // ✅ Filter Jobs based on Search Input
+  const filteredJobs = jobs.filter(job =>
+    job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    job.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    job.technology.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -262,7 +268,12 @@ const CareersPage = () => {
           {/* Job Listings */}
           <main className="lg:w-8/12 w-full">
             <div className="space-y-6">
-              {jobs.map((job) => (
+              {filteredJobs.length === 0 && (
+                <p className="text-center text-gray-600 text-lg">No jobs found matching your search.</p>
+              )}
+
+              {filteredJobs.map((job) => (
+
                 <div key={job.id} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div className="flex-1">

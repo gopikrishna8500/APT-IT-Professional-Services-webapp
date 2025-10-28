@@ -17,18 +17,23 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-0.5">
-              <img
-                src={aptitpsLogo}
-                alt="APTITPS Logo"
-                className="h-12 w-10000 object-contain"
-                style={{ maxWidth: "160px" }}
-              />
-              {/* <div className="text-sm">
+            <div className="flex items-center space-x-0.5 cursor-pointer">
+              <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <img
+                  src={aptitpsLogo}
+                  alt="APTITPS Logo"
+                  className="h-12 w-10000 object-contain"
+                  style={{ maxWidth: "160px" }}
+                />
+              </Link>
+            </div>
+
+
+            {/* <div className="text-sm">
                 <div className="font-bold text-white">APT IT</div>
                 <div className="text-xs text-gray-300">Professional Services</div>
               </div> */}
-            </div>
+
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">

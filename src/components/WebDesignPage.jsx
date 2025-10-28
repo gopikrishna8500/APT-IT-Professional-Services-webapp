@@ -42,7 +42,7 @@ const WebDesignPage = () => {
       .then((mod) => {
         if (mounted) setAnimationData(mod.default);
       })
-      .catch(() => {});
+      .catch(() => { });
 
     return () => {
       mounted = false;
@@ -159,10 +159,8 @@ const WebDesignPage = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-4">
                   Web Design & Development
                 </h2>
-                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                  We craft visually stunning and highly functional websites that deliver seamless
-                  user experiences and empower businesses to thrive online.
-                </p>
+                 <p className="text-gray-600 text-2xl font-bold  leading-relaxed mb-4"> We craft visually stunning and highly functional websites that deliver seamless
+                  user experiences and empower businesses to thrive online.</p>
               </div>
               <div className="flex justify-center md:justify-end mt-6 md:mt-0">
                 <div className="w-full sm:w-[400px] h-auto">
@@ -179,22 +177,30 @@ const WebDesignPage = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-center text-orange-500 mb-8 sm:mb-12">
               Our Core Custom Web Development Offerings
             </h2>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch shadow-lg rounded-3xl overflow-hidden bg-white">
-              <div className="bg-orange-500 text-white flex flex-col overflow-y-auto rounded-t-3xl lg:rounded-l-3xl max-h-[400px] lg:max-h-full">
+
+              {/* LEFT SCROLLABLE LIST */}
+              <div
+                className="bg-orange-500 text-white flex flex-col rounded-t-3xl lg:rounded-l-3xl 
+        max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-white/60 scrollbar-track-orange-600/30">
+
                 {coreWebData.map((item) => (
                   <div
                     key={item.id}
-                    className={`cursor-pointer px-4 sm:px-6 py-4 text-center sm:text-lg font-medium transition-all border-b border-orange-400/50 ${
-                      selectedCore.id === item.id
-                        ? "bg-orange-600 font-bold"
-                        : "hover:bg-orange-600"
-                    }`}
+                    className={`cursor-pointer px-4 sm:px-6 py-4 text-center sm:text-lg font-medium transition-all border-b border-orange-400/50 ${selectedCore.id === item.id
+                      ? "bg-orange-600 font-bold"
+                      : "hover:bg-orange-600"
+                      }`}
                     onClick={() => setSelectedCore(item)}
                   >
                     {item.title}
                   </div>
                 ))}
+
               </div>
+
+              {/* RIGHT DETAILS PANEL */}
               <div className="p-6 sm:p-10 flex flex-col justify-center items-center text-center bg-white transition-all duration-500 ease-in-out">
                 <div className="mb-4 text-4xl">{selectedCore.icon}</div>
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">
@@ -204,55 +210,89 @@ const WebDesignPage = () => {
                   {selectedCore.content}
                 </p>
               </div>
+
             </div>
           </div>
         </section>
 
+
         {/* Lifecycle Section */}
         <div className="mb-20">
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 text-center mb-8 sm:mb-12">
             Full Lifecycle Web Development
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {[
+
+          {(() => {
+            const [cards, setCards] = React.useState([
               {
                 img: businessAnalysisImg,
                 title: "Business Analysis",
-                desc: "We begin with deep-dive discovery sessions, stakeholder interviews, and market research to define goals, identify challenges, and align the product vision with your business needs.",
+                desc:
+                  "We begin with deep-dive discovery sessions, stakeholder interviews, and market research to define goals, identify challenges, and align the product vision with your business needs.",
               },
               {
                 img: strategicImg,
                 title: "Strategic Planning",
-                desc: "Our planning process includes scope definition, timeline estimation, resource allocation, and roadmap creation—setting the foundation for an efficient, result-oriented engagement.",
+                desc:
+                  "Our planning process includes scope definition, timeline estimation, resource allocation, and roadmap creation—setting the foundation for an efficient, result-oriented engagement.",
               },
               {
                 img: agileImg,
                 title: "Agile Development",
-                desc: "We use Agile methodologies to enable iterative delivery, continuous feedback, and flexible execution. This ensures reduced risk, improved product quality, and faster time to market.",
+                desc:
+                  "We use Agile methodologies to enable iterative delivery, continuous feedback, and flexible execution. This ensures reduced risk, improved product quality, and faster time to market.",
               },
               {
                 img: commitmentImg,
                 title: "Commitment to Timelines",
-                desc: "Guided by ISO-compliant standards and best practices, our team delivers on every milestone with punctuality, transparency & dedication making us a trusted long-term partner.",
+                desc:
+                  "Guided by ISO-compliant standards and best practices, our team delivers on every milestone with punctuality, transparency & dedication making us a trusted long-term partner.",
               },
-            ].map((card, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-lg shadow-lg p-4 sm:p-6 text-center hover:shadow-xl transition-shadow"
-              >
-                <div className="flex justify-center mb-4">
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                    className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
-                  />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">{card.title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{card.desc}</p>
+            ]);
+
+            let dragIndex = null;
+
+            const handleDragStart = (index) => {
+              dragIndex = index;
+            };
+
+            const handleDrop = (index) => {
+              const updated = [...cards];
+              const draggedCard = updated[dragIndex];
+              updated.splice(dragIndex, 1);
+              updated.splice(index, 0, draggedCard);
+              setCards(updated);
+            };
+
+            return (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                {cards.map((card, index) => (
+                  <div
+                    key={index}
+                    draggable
+                    onDragStart={() => handleDragStart(index)}
+                    onDragOver={(e) => e.preventDefault()}
+                    onDrop={() => handleDrop(index)}
+                    className="bg-white rounded-lg shadow-lg p-4 sm:p-6 text-center hover:shadow-xl transition-shadow cursor-move select-none"
+                  >
+                    <div className="flex justify-center mb-4">
+                      <img
+                        src={card.img}
+                        alt={card.title}
+                        className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
+                      />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">{card.title}</h3>
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{card.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            );
+          })()}
+
         </div>
+
 
         {/* Tech Logos */}
         <section className="py-16 bg-white">

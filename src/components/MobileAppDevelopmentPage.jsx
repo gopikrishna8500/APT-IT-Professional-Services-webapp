@@ -72,7 +72,7 @@ const MobileAppDevelopmentPage = () => {
               <h2 className="text-4xl font-bold text-primary mb-2 text-orange-500 ">
                 Android App Development
               </h2>
-              <p className="text-gray-600 font-bold text-lg leading-relaxed mb-4">
+              <p className="text-gray-600 text-2xl font-bold  leading-relaxed mb-4">
                 We specialize in creating high-quality mobile applications that enhance user experience and drive business growth.
               </p>
             </div>
@@ -99,7 +99,7 @@ const MobileAppDevelopmentPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch shadow-lg rounded-3xl overflow-hidden bg-white">
 
             {/* Left Panel (Scrollable List) */}
-            <div className="bg-orange-500 text-white flex flex-col justify-start overflow-y-auto rounded-tl-3xl rounded-tr-3xl lg:rounded-l-3xl max-h-[400px]">
+            <div className="bg-orange-500 text-white flex flex-col justify-start overflow-y-auto rounded-tl-3xl rounded-tr-3xl lg:rounded-l-3xl max-h-[300px]">
               {data.map((item) => (
                 <div
                   key={item.id}
@@ -125,69 +125,84 @@ const MobileAppDevelopmentPage = () => {
           </div>
         </div>
       </section>
-      {/* Mobile Application Platforms */}
+      {/* Mobile Application Platforms Section */}
       <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
 
           <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
             Mobile Application Platforms
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-            {/* Native Apps */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="flex justify-center mb-6">
-                <img src={nativeApp} alt="Native Apps" className="w-20 sm:w-24 md:w-28 h-auto object-contain mx-auto" />
+
+          {(() => {
+            // Local draggable state
+            const [cards, setCards] = React.useState([
+              {
+                title: "Native Apps",
+                img: nativeApp,
+                desc:
+                  "Our mobile team at APT IT PS creates apps for a specific mobile operating system such as iOS or Android using the latest tools and languages."
+              },
+              {
+                title: "Cross-Platform Apps",
+                img: crossPlatformApp,
+                desc:
+                  "We build apps using React Native or Flutter enabling faster development and reusable code across platforms."
+              },
+              {
+                title: "Web Apps",
+                img: webApp,
+                desc:
+                  "We develop web-based mobile applications accessible via mobile browsers, ensuring flexible deployment across devices."
+              },
+              {
+                title: "Hybrid Apps",
+                img: hybridApp,
+                desc:
+                  "Hybrid apps combine elements of native & web apps using web technologies packaged as native applications."
+              }
+            ]);
+
+            let dragIndex = null;
+
+            const handleDragStart = (index) => {
+              dragIndex = index;
+            };
+
+            const handleDrop = (index) => {
+              const newCards = [...cards];
+              const draggedCard = newCards[dragIndex];
+              newCards.splice(dragIndex, 1);
+              newCards.splice(index, 0, draggedCard);
+              setCards(newCards);
+            };
+
+            return (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                {cards.map((card, index) => (
+                  <div
+                    key={index}
+                    draggable
+                    onDragStart={() => handleDragStart(index)}
+                    onDragOver={(e) => e.preventDefault()}
+                    onDrop={() => handleDrop(index)}
+                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300 cursor-move"
+                    style={{ userSelect: "none" }}
+                  >
+                    <div className="flex justify-center mb-4">
+                      <img src={card.img} alt={card.title} className="w-16 sm:w-20 object-contain" />
+                    </div>
+                    <h3 className="text-lg font-bold text-center mb-3">{card.title}</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      {card.desc}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-center mb-2 sm:mb-4">Native Apps</h3>
-              <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
-                Our mobile team at APT IT PS creates apps for a specific mobile operating system, such as iOS or Android, the latest development tools and platform-specific programming languages.
-              </p>
-            </div>
-            {/* Cross-Platform Apps */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="flex justify-center mb-6">
-                <img
-                  src={crossPlatformApp}
-                  alt="Cross-Platform Apps"
-                  className="w-20 h-20 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">Cross-Platform Apps</h3>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
-                Our team builds applications using frameworks including React Native or Flutter. This allows for faster development cycles and code reusability across different operating systems and platforms.
-              </p>
-            </div>
-            {/* Web Apps */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="flex justify-center mb-6">
-                <img
-                  src={webApp}
-                  alt="Web Apps"
-                  className="w-20 h-20 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">Web Apps</h3>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
-                Apart from cross-platform applications, we develop web-based mobile applications. These are accessible through mobile browsers and offer flexibility in deployment across various devices.
-              </p>
-            </div>
-            {/* Hybrid Apps */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="flex justify-center mb-6">
-                <img
-                  src={hybridApp}
-                  alt="Hybrid Apps"
-                  className="w-20 h-20 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">Hybrid Apps</h3>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
-                Combining the capabilities and elements of both native and web applications, our team develops hybrid applications using web technologies packaged as native applications.
-              </p>
-            </div>
-          </div>
+            );
+          })()}
         </div>
       </section>
+
       {/* Our Process & Integrations */}
       <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[90%]">
@@ -209,7 +224,7 @@ const MobileAppDevelopmentPage = () => {
             </div>
             {/* Center Column - iPhone Image */}
             <div className="flex items-center justify-center">
-              <img src={iphone} alt="Mobile App Preview" className="w-full sm:w-80 md:w-96 mx-auto" />
+              <img src={iphone} alt="Mobile App Preview" className="w-full sm:w-100 md:w-96 mx-auto" />
             </div>
             {/* Right Column - Integrations */}
             <div className="space-y-6">

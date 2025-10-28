@@ -66,7 +66,7 @@ const PortfolioPage = () => {
             {/* OUR EXPERTISE Section */}
             <section className="pt-24 pb-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h1 className="text-5xl font-bold mb-8 tracking-wider text-slate-800">
+                    <h1 className="text-5xl font-bold mb-8 tracking-wider text-orange-500">
                         OUR EXPERTISE
                     </h1>
                     <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-lg">
@@ -158,7 +158,7 @@ const PortfolioPage = () => {
             </section>
 
             {/* Authorised Partners */}
-            <h2 className="text-5xl font-bold text-center mb-8 tracking-wider text-gray-800">
+            <h2 className="text-5xl font-bold text-center mb-8 tracking-wider text-orange-500">
                 AUTHORISED PARTNERS
             </h2>
             <p className="text-gray-600 text-center leading-relaxed max-w-4xl mx-auto mb-16 text-lg">
@@ -184,7 +184,7 @@ const PortfolioPage = () => {
             {/* Consultation Section */}
             <section className="py-16 px-4 bg-gray-50">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 tracking-wide">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-orange-500  tracking-wide">
                         Let’s Transform Your Ideas Into Reality
                     </h2>
                     <p className="text-gray-600 mb-8 text-lg max-w-3xl mx-auto leading-relaxed">
