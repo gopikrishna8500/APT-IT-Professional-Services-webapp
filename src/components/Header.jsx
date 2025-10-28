@@ -131,7 +131,7 @@ const Header = () => {
                 <Phone className="w-4 h-4" />
                 <span className="text-sm font-bold">+1 (718) 360-4995</span>
               </div>
-              <button className="ml-6 bg-red-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
+              <button className="ml-6 bg-orange-500 hover:bg-red-600 px-4 py-2 rounded-md text-sm flex items-center space-x-2 transition-colors font-bold">
                 <Mail className="w-4 h-4" />
                 <span>
                   <a href="mailto:info@aptitps.com">Mail Us</a>

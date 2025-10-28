@@ -170,7 +170,7 @@ const PortfolioPage = () => {
 
             {/* About Us */}
             <div className="mt-16 text-center max-w-4xl mx-auto">
-                <h2 className="text-5xl font-bold mb-16 tracking-wider text-slate-800">
+                <h2 className="text-5xl font-bold mb-16 tracking-wider  text-orange-500">
                     ABOUT US
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-lg">
@@ -203,7 +203,7 @@ const PortfolioPage = () => {
             {/* Clients Section */}
             <section className="py-16 px-4 bg-gray-50">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-5xl font-bold mb-16 tracking-wider text-slate-800">
+                    <h2 className="text-5xl font-bold mb-16 tracking-wider text-orange-500">
                         OUR CLIENTS
                     </h2>
 
