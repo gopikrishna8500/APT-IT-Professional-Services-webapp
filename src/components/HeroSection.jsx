@@ -117,20 +117,22 @@
 // export default HeroSection;
 
 
+
+
 import React from "react";
 import { Link } from "react-router-dom";
-import backgroundVideo from "../assets/digital-marketing-bg.mp4";
+import backgroundVideo from "../assets/digital-marketing-bg5.mp4";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen  flex items-center justify-start overflow-hidden bg-[#02122b]"
+      className="relative min-h-screen w-full flex items-center justify-start overflow-hidden"
     >
       {/* 🔹 Background Video */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
         <video
-          className="w-full h-full object-cover brightness-300"
+          className="w-full h-full object-cover brightness-auto"
           src={backgroundVideo}
           autoPlay
           loop
@@ -138,14 +140,16 @@ const HeroSection = () => {
           playsInline
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#02122b]/80"></div>
+
       </div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
       {/* 🔹 Content */}
       <div className="relative z-10 w-full max-w-10xl mx-auto px-6 sm:px-10 lg:px-20 py-20 text-center lg:text-left">
-        <h1 className="text-white text-2xl sm:text-2xl lg:text-6xl font-extrabold mb-4 leading-tight">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 text-2xl sm:text-2xl lg:text-6xl font-extrabold mb-4 leading-tight">
           Welcome to APT IT Professional Services
         </h1>
+
 
         <p className="text-white text-lg sm:text-xl font-semibold mb-6">
           <b>Architecting The Digital Change</b>
@@ -170,3 +174,60 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import backgroundVideo from "../assets/digital-marketing-bg5.mp4";
+
+// const HeroSection = () => {
+//   return (
+//     <section
+//       id="home"
+//       className="relative min-h-screen w-full flex items-center justify-start overflow-hidden"
+//     >
+//       {/* Background Video */}
+//       <div className="absolute inset-0 w-full h-full">
+//         <video
+//           className="absolute inset-0 w-full h-full object-cover"
+//           src={backgroundVideo}
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//         />
+//       </div>
+
+//       {/* Dark Overlay For Text Readability (optional and very light) */}
+//       <div className="absolute inset-0 bg-black/40"></div>
+
+//       {/* Content */}
+//       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 text-center lg:text-left py-24 lg:py-32">
+//         <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-extrabold mb-4 leading-tight">
+//           Welcome to APT IT Professional Services
+//         </h1>
+
+//         <p className="text-white text-lg sm:text-xl font-semibold mb-6">
+//           <b>Architecting The Digital Change</b>
+//         </p>
+
+//         <p className="text-white/90 text-base sm:text-lg leading-relaxed max-w-3xl mb-8">
+//           At APT IT Professional Services, we leverage the latest technology to
+//           propel your business forward to make it scalable, secure, and
+//           future-ready. Powered by engineers with a problem-solving mindset, we
+//           deliver outcomes that go beyond expectations.
+//         </p>
+
+//         <Link
+//           to="/about"
+//           className="inline-block bg-orange-500 hover:bg-red-600 text-white font-semibold text-lg px-8 py-3 rounded-md shadow-md transition-all duration-300 hover:scale-105"
+//         >
+//           Read More
+//         </Link>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
