@@ -219,6 +219,7 @@ const Header = () => {
                   <Link
                     to="/portfolio"
                     className="font-bold text-white text-lg hover:text-orange-400 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Portfolio
                   </Link>
