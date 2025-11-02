@@ -50,7 +50,7 @@ const PortfolioPage = () => {
             >
                 <div className="absolute inset-0 bg-black opacity-30"></div>
                 <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                    <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                    <h1 className="text-4xl font-bold text-orange-500 mb-4 drop-shadow-lg">
                         Portfolio
                     </h1>
                     <div className="flex items-center justify-center text-white">
@@ -58,7 +58,7 @@ const PortfolioPage = () => {
                             Home
                         </span>
                         <ChevronRight className="h-4 w-4 mx-2 text-orange-400" />
-                        <span className="text-orange-300 font-semibold">Portfolio</span>
+                        <span className="text-orange-500 font-semibold">Portfolio</span>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@ const PortfolioPage = () => {
             {/* OUR EXPERTISE Section */}
             <section className="pt-24 pb-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h1 className="text-5xl font-bold mb-8 tracking-wider text-orange-500">
+                    <h1 className="text-4xl font-bold mb-8 tracking-wider text-orange-500">
                         OUR EXPERTISE
                     </h1>
                     <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-lg">
@@ -158,7 +158,7 @@ const PortfolioPage = () => {
             </section>
 
             {/* Authorised Partners */}
-            <h2 className="text-5xl font-bold text-center mb-8 tracking-wider text-orange-500">
+            <h2 className="text-4xl font-bold text-center mb-8 tracking-wider text-orange-500">
                 AUTHORISED PARTNERS
             </h2>
             <p className="text-gray-600 text-center leading-relaxed max-w-4xl mx-auto mb-16 text-lg">
@@ -170,7 +170,7 @@ const PortfolioPage = () => {
 
             {/* About Us */}
             <div className="mt-16 text-center max-w-4xl mx-auto">
-                <h2 className="text-5xl font-bold mb-16 tracking-wider  text-orange-500">
+                <h2 className="text-4xl font-bold mb-16 tracking-wider  text-orange-500">
                     ABOUT US
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-lg">
@@ -203,7 +203,7 @@ const PortfolioPage = () => {
             {/* Clients Section */}
             <section className="py-16 px-4 bg-gray-50">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-5xl font-bold mb-16 tracking-wider text-orange-500">
+                    <h2 className="text-4xl font-bold mb-16 tracking-wider text-orange-500">
                         OUR CLIENTS
                     </h2>
 
@@ -225,6 +225,14 @@ const PortfolioPage = () => {
                     </div>
                 </div>
             </section>
+             <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors z-50"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
         </div>
     );
 };

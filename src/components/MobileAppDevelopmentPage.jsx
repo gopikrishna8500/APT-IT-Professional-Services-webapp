@@ -63,7 +63,7 @@ const MobileAppDevelopmentPage = () => {
         </div>
       </div>
       {/* Android App Development Section */}
-      <section className="py-20 mb-5 bg-white">
+      <section className="py-12 mb-3 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
@@ -90,7 +90,7 @@ const MobileAppDevelopmentPage = () => {
         </div>
       </section>
       {/* Our custom mobile app development service Suite */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[85%]">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-orange-500 mb-12">
             Our custom mobile app development service Suite
@@ -126,7 +126,7 @@ const MobileAppDevelopmentPage = () => {
         </div>
       </section>
       {/* Mobile Application Platforms Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
 
           <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
@@ -204,45 +204,44 @@ const MobileAppDevelopmentPage = () => {
       </section>
 
       {/* Our Process & Integrations */}
-      <section className="py-20 bg-white">
-        <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[90%]">
-          <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
-            Our Process & Integrations
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 items-center">
-            {/* Left Column - Our Process */}
-            <div className="space-y-6">
-              <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-left md:text-left">Our Process</h3>
-              <div className="space-y-4 text-left text-gray-700">
-                <p><span className="font-semibold text-orange-500">Discovery Phase</span> - We immerse in your business, identify challenges, explore opportunities, and set clear objectives.</p>
-                <p><span className="font-semibold text-orange-500">Design Phase</span> - User-focused, intuitive designs from wireframes to prototypes, ensuring seamless user journeys.</p>
-                <p><span className="font-semibold text-orange-500">Development Phase</span> - Robust, scalable apps built using cutting-edge technologies and agile collaboration.</p>
-                <p><span className="font-semibold text-orange-500">Testing Phase</span> - Comprehensive QA for performance, security, and usability before release.</p>
-                <p><span className="font-semibold text-orange-500">Deployment & Go-to-Market</span> - Store compliance, optimization, and smooth launch for maximum visibility.</p>
-                <p><span className="font-semibold text-orange-500">Maintenance & Support</span> - Ongoing updates, enhancements, and 24/7 support to keep your app thriving.</p>
-              </div>
+      <section className="py-12 bg-white">        <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[90%]">
+        <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">
+          Our Process & Integrations
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 items-center">
+          {/* Left Column - Our Process */}
+          <div className="space-y-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-left md:text-left">Our Process</h3>
+            <div className="space-y-4 text-left text-gray-700">
+              <p><span className="font-semibold text-orange-500">Discovery Phase</span> - We immerse in your business, identify challenges, explore opportunities, and set clear objectives.</p>
+              <p><span className="font-semibold text-orange-500">Design Phase</span> - User-focused, intuitive designs from wireframes to prototypes, ensuring seamless user journeys.</p>
+              <p><span className="font-semibold text-orange-500">Development Phase</span> - Robust, scalable apps built using cutting-edge technologies and agile collaboration.</p>
+              <p><span className="font-semibold text-orange-500">Testing Phase</span> - Comprehensive QA for performance, security, and usability before release.</p>
+              <p><span className="font-semibold text-orange-500">Deployment & Go-to-Market</span> - Store compliance, optimization, and smooth launch for maximum visibility.</p>
+              <p><span className="font-semibold text-orange-500">Maintenance & Support</span> - Ongoing updates, enhancements, and 24/7 support to keep your app thriving.</p>
             </div>
-            {/* Center Column - iPhone Image */}
-            <div className="flex items-center justify-center">
-              <img src={iphone} alt="Mobile App Preview" className="w-full sm:w-100 md:w-96 mx-auto" />
-            </div>
-            {/* Right Column - Integrations */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-4 text-left">Integrations We Offer</h3>
-              <div className="space-y-4 text-left text-gray-700">
-                <p><span className="font-semibold text-orange-500">API Integration</span> - Enable your app to connect with platforms via RESTful or GraphQL APIs—unlocking payment gateways, social logins, and SaaS features.</p>
-                <p><span className="font-semibold text-orange-500">Database Integration</span> - Secure, real-time connections with MySQL, PostgreSQL, MongoDB, and Firebase for structured and unstructured data.</p>
-                <p><span className="font-semibold text-orange-500">Authentication & Authorization</span> - Industry-standard protocols (OAuth 2.0, OpenID, JWT, SSO) for secure and controlled access.</p>
-                <p><span className="font-semibold text-orange-500">Enterprise System Integration</span> - Seamless sync with CRM, ERP, HRMS, and legacy systems for unified workflows and visibility.</p>
-                <p><span className="font-semibold text-orange-500">Push Notification Integration</span> - Personalized, geo-targeted alerts using FCM, OneSignal, and APNs to boost engagement.</p>
-                <p><span className="font-semibold text-orange-500">Messaging & Communication</span> - In-app chat, VoIP, and video conferencing with Twilio, Sendbird, Agora, and WebRTC.</p>
-              </div>
+          </div>
+          {/* Center Column - iPhone Image */}
+          <div className="flex items-center justify-center">
+            <img src={iphone} alt="Mobile App Preview" className="w-full sm:w-100 md:w-96 mx-auto" />
+          </div>
+          {/* Right Column - Integrations */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4 text-left">Integrations We Offer</h3>
+            <div className="space-y-4 text-left text-gray-700">
+              <p><span className="font-semibold text-orange-500">API Integration</span> - Enable your app to connect with platforms via RESTful or GraphQL APIs—unlocking payment gateways, social logins, and SaaS features.</p>
+              <p><span className="font-semibold text-orange-500">Database Integration</span> - Secure, real-time connections with MySQL, PostgreSQL, MongoDB, and Firebase for structured and unstructured data.</p>
+              <p><span className="font-semibold text-orange-500">Authentication & Authorization</span> - Industry-standard protocols (OAuth 2.0, OpenID, JWT, SSO) for secure and controlled access.</p>
+              <p><span className="font-semibold text-orange-500">Enterprise System Integration</span> - Seamless sync with CRM, ERP, HRMS, and legacy systems for unified workflows and visibility.</p>
+              <p><span className="font-semibold text-orange-500">Push Notification Integration</span> - Personalized, geo-targeted alerts using FCM, OneSignal, and APNs to boost engagement.</p>
+              <p><span className="font-semibold text-orange-500">Messaging & Communication</span> - In-app chat, VoIP, and video conferencing with Twilio, Sendbird, Agora, and WebRTC.</p>
             </div>
           </div>
         </div>
+      </div>
       </section>
       {/* Why Choose Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-orange-500 mb-12 sm:mb-16">
             Why Choose APT IT Professional Services?
@@ -337,7 +336,7 @@ const MobileAppDevelopmentPage = () => {
         </div>
       </section>
       {/* our Tech Eminence Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-500 text-center mb-10">
           Our Tech Eminence
         </h2>
@@ -360,7 +359,7 @@ const MobileAppDevelopmentPage = () => {
         </div>
       </section>
       {/* Our Engagement Models Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[80%]">
           <div className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6">

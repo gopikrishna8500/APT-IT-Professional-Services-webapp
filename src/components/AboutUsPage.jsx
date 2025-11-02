@@ -12,37 +12,37 @@ import Footer from './Footer';
 const AboutUsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-     <div
-  className="relative py-20 bg-cover bg-center overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=1600&q=80')",
-  }}
->
-  {/* Dark gradient overlay for professional look */}
-  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-gray-900/80 to-slate-900/90"></div>
+      <div
+        className="relative py-20 bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      >
+        {/* Dark gradient overlay for professional look */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-gray-900/80 to-slate-900/90"></div>
 
-  {/* Optional subtle pattern overlay */}
-  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        {/* Optional subtle pattern overlay */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
-  {/* Content */}
-  <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-    <h1 className="text-4xl font-bold text-orange-500 mb-4 drop-shadow-lg">
-      About Us
-    </h1>
-    <div className="flex items-center justify-center text-white">
-      <span className="hover:text-orange-400 transition-colors cursor-pointer">
-        Home
-      </span>
-      <ChevronRight className="h-4 w-4 mx-2 text-orange-400" />
-      <span className="text-orange-500 font-semibold">About Us</span>
-    </div>
-  </div>
-</div>
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4 drop-shadow-lg">
+            About Us
+          </h1>
+          <div className="flex items-center justify-center text-white">
+            <span className="hover:text-orange-400 transition-colors cursor-pointer">
+              Home
+            </span>
+            <ChevronRight className="h-4 w-4 mx-2 text-orange-400" />
+            <span className="text-orange-500 font-semibold">About Us</span>
+          </div>
+        </div>
+      </div>
 
 
       {/* Hero Section with Team Image */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-10">
         <div className="max-w-7xl mx-auto px-4 text-center relative">
           {/* World Map Background */}
           <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
@@ -73,7 +73,7 @@ const AboutUsPage = () => {
             />
           </div>
           {/* Services Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {/* Mobile App Development */}
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
               <div className="flex justify-center mb-6">
@@ -132,9 +132,9 @@ const AboutUsPage = () => {
       </div>
 
       {/* About Content Section */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-10">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             {/* Left Image */}
             <div>
               <img
@@ -165,7 +165,7 @@ const AboutUsPage = () => {
       </div>
 
       {/* Vision & Mission Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-10">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-slate-800 mb-5">Our Vision & Mission</h2>
           <div className="space-y-12">
@@ -210,6 +210,14 @@ const AboutUsPage = () => {
           <TestimonialSection />
         </div>
       </div>
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors z-50"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
     </div>
   );
 };

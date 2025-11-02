@@ -68,7 +68,7 @@ const ContactUsPage = () => {
 
 
       {/* Contact Info Cards */}
-      <div className="py-16 bg-white">
+      <div className="py-10 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {[{
@@ -99,9 +99,9 @@ const ContactUsPage = () => {
       </div>
 
       {/* Our Branches Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-orange-500 mb-4">Our Branches</h2>
           </div>
 
@@ -138,9 +138,9 @@ const ContactUsPage = () => {
 
 
       {/* Contact Form Section */}
-      <div className="py-16 bg-white">
+      <div className="py-10 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Get In Touch!</h2>
             <p className="text-gray-600">We have completed over a 1000+ projects for five hundred clients. Give us your next project.</p>
           </div>
@@ -202,6 +202,14 @@ const ContactUsPage = () => {
           </form>
         </div>
       </div>
+       <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors z-50"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
     </div>
   );
 };
