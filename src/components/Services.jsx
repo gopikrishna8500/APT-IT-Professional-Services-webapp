@@ -14,6 +14,8 @@ const Services = () => {
       {/* Breadcrumb Section */}
       <div
         className="relative py-20 bg-cover bg-center overflow-hidden"
+
+
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80')",
@@ -37,7 +39,8 @@ const Services = () => {
 
 
       {/* Hero Section with Team Image */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-10">
+
         <div className="max-w-7xl mx-auto px-4 text-center relative">
           {/* World Map Background */}
           <div className="absolute top-8 left-1/2 transform -translate-x-1/2 pointer-events-none select-none">
@@ -65,7 +68,8 @@ const Services = () => {
             />
           </div>
           {/* Services Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
             {/* Mobile App Development */}
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow group hover:bg-orange-500 hover:text-white">
               <div className="flex justify-center mb-6">
@@ -122,6 +126,14 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors z-50"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
     </div>
   );
 };

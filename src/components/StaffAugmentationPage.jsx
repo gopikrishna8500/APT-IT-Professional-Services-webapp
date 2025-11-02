@@ -25,6 +25,7 @@ const StaffAugmentationPage = () => {
       {/* <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-4"> */}
       <div
         className="relative py-20 bg-cover bg-center overflow-hidden"
+
         style={{
           backgroundImage:
             "url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800')",
@@ -46,7 +47,8 @@ const StaffAugmentationPage = () => {
 
 
       <div className="container mx-auto px-4 py-16 w-full lg:w-10/12">
-        <section className="py-20 bg-white mb-10">
+        <section className="py-12 bg-white mb-6">
+
           <div className="container mx-auto px-4 w-full lg:w-10/12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
 
@@ -80,14 +82,16 @@ const StaffAugmentationPage = () => {
             </div>
           </div>
         </section>
-        <div className="mb-20">
+        <div className="mb-10">
+
           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6">
             Our Engagement Models
           </h2>
-          <p className="text-gray-500 text-center mb-12 max-w-3xl mx-auto">
+          <p className="text-gray-500 text-center mb-6 max-w-3xl mx-auto">
+
             We offer flexible engagement models tailored to your product lifecycle, resource needs, and budget.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl border border-gray-200 hover:bg-orange-500 hover:text-white group transition-colors duration-200">
               <div className="flex justify-center mb-6">
                 <img src={productChainImg} alt="Product Development" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
@@ -122,10 +126,11 @@ const StaffAugmentationPage = () => {
           </div>
         </div>
 
-        <div className="mb-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="mb-10">
+
+          <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Our Model
               </h2>
               <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
@@ -147,12 +152,13 @@ const StaffAugmentationPage = () => {
               </ul>
             </div>
             <div className="flex justify-center">
-             <img src={modelImg} alt="Our Model" className="w-full max-w-md rounded-lg shadow-lg" />
+              <img src={modelImg} alt="Our Model" className="w-full max-w-md rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
 
-        <div className="mb-20 max-w-8xl mx-auto">
+        <div className="mb-10 max-w-8xl mx-auto">
+
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
               <button
@@ -307,17 +313,18 @@ const StaffAugmentationPage = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-b from-white to-gray-50 py-16 text-center">
+        <div className="bg-gradient-to-b from-white to-gray-50 py-10 text-center">
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 mb-4">
             Need some assistance in selecting what works best for you?
           </h2>
           <p className="text-gray-500 text-sm sm:text-base md:text-lg mb-4 max-w-3xl mx-auto">
             At APT IT Professional Services, we know the importance of customization. Our tech team of managers and strategists are here to help you with a concrete roadmap and help you <span className="font-bold italic text-gray-600">Build Your Own Team</span>.
           </p>
-         <p className="text-gray-500 text-sm sm:text-base md:text-lg mb-8">
+          <p className="text-gray-500 text-sm sm:text-base md:text-lg mb-8">
             Talk to functional consultants and we will guide you to the smartest fit!
           </p>
-         <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base md:text-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base md:text-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
             <Link to="/contact-us">
               Contact Us
             </Link>
@@ -326,11 +333,12 @@ const StaffAugmentationPage = () => {
       </div>
 
       <button
-        onClick={scrollToTop}
-       className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-orange-500 hover:bg-orange-600 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-        aria-label="Scroll to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors z-50"
       >
-        <ArrowUp className="w-5 sm:w-6 h-5 sm:h-6" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
       </button>
     </div>
   );

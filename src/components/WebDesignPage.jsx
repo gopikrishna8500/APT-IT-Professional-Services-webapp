@@ -151,7 +151,8 @@ const WebDesignPage = () => {
       </div>
 
       {/* Intro Section */}
-      <div className="container px-4 py-16 mx-auto lg:w-10/12">
+   <div className="container px-4 py-10 mx-auto lg:w-10/12">
+
         <section className="py-12 bg-white mb-10">
           <div className="max-w-screen-xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -172,7 +173,8 @@ const WebDesignPage = () => {
         </section>
 
         {/* Core Web Offerings */}
-        <section className="py-20 bg-gray-50">
+       <section className="py-12 bg-gray-50">
+
           <div className="max-w-screen-xl mx-auto px-4 lg:max-w-[85%]">
             <h2 className="text-3xl sm:text-4xl font-bold text-center text-orange-500 mb-8 sm:mb-12">
               Our Core Custom Web Development Offerings
@@ -217,7 +219,8 @@ const WebDesignPage = () => {
 
 
         {/* Lifecycle Section */}
-        <div className="mb-20">
+      <div className="mb-10">
+
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 text-center mb-8 sm:mb-12">
             Full Lifecycle Web Development
@@ -266,7 +269,7 @@ const WebDesignPage = () => {
             };
 
             return (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 {cards.map((card, index) => (
                   <div
                     key={index}
@@ -295,7 +298,8 @@ const WebDesignPage = () => {
 
 
         {/* Tech Logos */}
-        <section className="py-16 bg-white">
+       <section className="py-10 bg-white">
+
           <h2 className="text-orange-500 text-center font-bold mb-10 text-[28px] sm:text-[35px]">
             Our Tech Eminence
           </h2>
@@ -325,14 +329,15 @@ const WebDesignPage = () => {
         </section>
 
         {/* Engagement Models */}
-        <div className="mb-20">
+        <div className="mb-10">
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 text-center mb-6 sm:mb-12">
             Our Engagement Models
           </h2>
           <p className="text-gray-500 text-center mb-8 sm:mb-12 max-w-3xl mx-auto text-sm sm:text-base">
             We offer flexible engagement models tailored to your product lifecycle, resource needs, and budget.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 img: productChainImg,
@@ -374,12 +379,13 @@ const WebDesignPage = () => {
       </div>
 
       {/* Scroll-to-Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-        aria-label="Scroll to top"
+       <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors z-50"
       >
-        <ArrowUp className="w-6 h-6" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
       </button>
     </div>
   );
